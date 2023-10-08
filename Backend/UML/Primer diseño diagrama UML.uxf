@@ -5,54 +5,21 @@
     <id>UMLClass</id>
     <coordinates>
       <x>380</x>
-      <y>40</y>
-      <w>210</w>
-      <h>400</h>
-    </coordinates>
-    <panel_attributes>User
---
--id: int
--name: String
--img: Image
--surname: String
--username: String
--age: int
--course: Course
--email: String
--password: String
--cellphone: int
--birthDate: Date
--rol: String
-
---
-
--getters();
--setters():
-+Create();
-+Read();
-+Update();
-+Delete();</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>380</x>
-      <y>550</y>
+      <y>490</y>
       <w>210</w>
       <h>380</h>
     </coordinates>
     <panel_attributes>Course
 --
--id: int
+-id: number
 -image: Image
--name: String
--language: String
--length: Double
--stars: Double
--difficulty: Double
--description: String
--content: String
+-name: string
+-language: string
+-length: number
+-stars: number
+-difficulty: number
+-description: string
+-content: string
 
 -
 
@@ -75,39 +42,72 @@
     <id>Relation</id>
     <coordinates>
       <x>460</x>
-      <y>430</y>
+      <y>380</y>
       <w>40</w>
-      <h>140</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 m2=n
 m1=1
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
       <x>720</x>
-      <y>840</y>
+      <y>780</y>
       <w>190</w>
       <h>90</h>
     </coordinates>
     <panel_attributes>Nota:
-Solo podra modificar
+Solo podrá modificar
 el curso un usuario cuyo
-rol sea de administrador</panel_attributes>
+rol sea de administrador.</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>580</x>
-      <y>880</y>
+      <y>820</y>
       <w>160</w>
       <h>30</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>400</x>
+      <y>0</y>
+      <w>210</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-id: number
+-name: string
+-img: Image
+-surname: string
+-username: string
+-age: number
+-course: Course
+-email: string
+-password: string
+-cellphone: number
+-birthDate: Date
+-rol: string
+
+--
+
+-getters();
+-setters():
++Create();
++Read();
++Update();
++Delete();</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
