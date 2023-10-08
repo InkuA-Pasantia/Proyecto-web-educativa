@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>40</y>
+      <w>210</w>
+      <h>400</h>
+    </coordinates>
+    <panel_attributes>User
+--
+-id: int
+-name: String
+-img: Image
+-surname: String
+-username: String
+-age: int
+-course: Course
+-email: String
+-password: String
+-cellphone: int
+-birthDate: Date
+-rol: String
+
+--
+
+-getters();
+-setters():
++Create();
++Read();
++Update();
++Delete();</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>380</x>
+      <y>550</y>
+      <w>210</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes>Course
+--
+-id: int
+-image: Image
+-name: String
+-language: String
+-length: Double
+-stars: Double
+-difficulty: Double
+-description: String
+-content: String
+
+-
+
+-getters();
+-setters():
++Create();
++Read();
++Update();
++Delete();
++Find();
++Rate();
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>460</x>
+      <y>430</y>
+      <w>40</w>
+      <h>140</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m2=n
+m1=1
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>720</x>
+      <y>840</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>Nota:
+Solo podra modificar
+el curso un usuario cuyo
+rol sea de administrador</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>580</x>
+      <y>880</y>
+      <w>160</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;140.0;10.0</additional_attributes>
+  </element>
+</diagram>
