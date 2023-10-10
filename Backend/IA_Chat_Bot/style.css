@@ -1,11 +1,13 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 :root {
     --text-color: #FFFFFF;
     --icon-color: #ACACBE;
@@ -16,6 +18,7 @@
     --outgoing-chat-border: #343541;
     --incoming-chat-border: #444654;
 }
+
 .light-mode {
     --text-color: #343541;
     --icon-color: #a9a9bc;
@@ -26,6 +29,7 @@
     --outgoing-chat-border: #FFFFFF;
     --incoming-chat-border: #D9D9E3;
 }
+
 body {
     background: var(--outgoing-chat-bg);
 }
@@ -36,9 +40,11 @@ body {
     padding-bottom: 150px;
     overflow-y: auto;
 }
+
 :where(.chat-container, textarea)::-webkit-scrollbar {
-    width: 6px;
+    width: 60px;
 }
+
 .chat-container .chat {
     padding: 25px 10px;
     display: flex;
@@ -46,57 +52,65 @@ body {
     color: var(--text-color);
 
 }
+
 .chat-container .chat.outgoing {
     background: var(--outgoing-chat-bg);
     border: 1px solid var(--outgoing-chat-border);
 }
+
 .chat-container .chat.incoming {
     background: var(--incoming-chat-bg);
     border: 1px solid var(--incoming-chat-border);
 }
+
 .chat .chat-content {
     display: flex;
     max-width: 1200px;
     width: 100px;
-    align-items: 100%;
     align-items: flex-start;
     justify-content: space-between;
 }
-.chat .chat-content span{
+
+.chat .chat-content span {
     font-size: 1.3rem;
     color: var(--icon-color);
     visibility: hidden;
 }
-.chat:hover .chat-content span{
+
+.chat:hover .chat-content span {
     visibility: visible;
 }
+
 .chat .chat-details {
     display: flex;
     align-items: center;
-
 }
+
 .chat .chat-details img {
     width: 35px;
     height: 35px;
     align-self: flex-start;
     object-fit: cover;
     border-radius: 2px;
-
 }
+
 .chat .chat-details p {
     white-space: pre-wrap;
     font-size: 1.05rem;
     padding: 0 50px 0 25px;
 }
+
 span.material-symbols-rounded {
     user-select: none;
     cursor: pointer;
 }
+
 .typing-animation {
     display: inline-flex;
     padding-left: 25px;
 }
-.typing-animation .typing-dot{
+
+.typing-animation .typing-dot {
     height: 7px;
     width: 7px;
     opacity: 0.7;
@@ -105,18 +119,23 @@ span.material-symbols-rounded {
     background: var(--text-color);
     animation: animateDots 1.5s var(--delay) ease-in-out infinite;
 }
+
 @keyframes animateDots {
-    0%, 44% {
+
+    0%,
+    44% {
         transform: translateY(0px);
     }
+
     22% {
         opacity: 0.4;
         transform: translateY(-6px);
     }
+
     44% {
         opacity: 0.2;
     }
-    
+
 }
 
 /* Typing container styling */
@@ -131,6 +150,7 @@ span.material-symbols-rounded {
     border: 1px solid var(--incoming-chat-border);
 
 }
+
 .typing-container .typing-content {
     max-width: 950px;
     width: 100%;
@@ -138,11 +158,13 @@ span.material-symbols-rounded {
     align-items: flex-end;
 
 }
+
 .typing-content .typing-textarea {
     width: 100%;
     display: flex;
     position: relative;
 }
+
 .typing-textarea textarea {
     width: 100%;
     height: 55px;
@@ -155,29 +177,35 @@ span.material-symbols-rounded {
     background: var(--incoming-chat-bg);
     outline: 1px solid var(--incoming-chat-border);
 }
+
 .typing-textarea textarea::placeholder {
     color: var(--placeholder-color);
 }
+
 .typing-textarea span {
     position: absolute;
     right: 0;
     bottom: 0;
     visibility: hidden;
 }
-.typing-textarea textarea:valid ~ span {
+
+.typing-textarea textarea:valid~span {
     visibility: visible;
 }
+
 .typing-content span {
-    height: 55px;
+    height: 50px;
     width: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--icon-color);
 }
+
 .typing-controls {
     display: flex;
-    }
+}
+
 .typing-controls span {
     margin-left: 7px;
     font-size: 1.4rem;
@@ -185,6 +213,3 @@ span.material-symbols-rounded {
     background: var(--incoming-chat-bg);
     border: 1px solid var(--incoming-chat-border);
 }
-
-
-
