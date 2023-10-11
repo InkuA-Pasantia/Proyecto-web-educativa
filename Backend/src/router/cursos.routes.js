@@ -5,19 +5,19 @@ import {
   eliminarCurso,
   listarCurso,
   listarCursos
-} from '../controllers/tareas.controller.js'
+} from '../controllers/cursos.controller.js'
 import { isAuth } from '../middlewares/auth.middleware.js'
 
 const router = Router()
 
-router.get('/tareas', isAuth, listarCursos)
+router.get('/cursos', isAuth, listarCursos)
 
-router.get('/tareas/:id', isAuth, listarCurso)
+router.get('/cursos/:id', isAuth, listarCurso)
 
-router.post('/tareas', isAuth, crearCurso)
+router.post('/cursos', isAuth, crearCurso)
 
-router.put('/tareas/:id', isAuth, actualizarCurso)
+router.put('/cursos/:id', isAuth, actualizarCurso)
 
-router.delete('/tareas/:id', isAuth, eliminarCurso)
+router.delete('/cursos/:id', isAuth, eliminarCurso)
 
 export default router
