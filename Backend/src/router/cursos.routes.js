@@ -1,23 +1,23 @@
-import Router from 'express-promise-router'
+import Router from 'express-promise-router';
 import {
   actualizarCurso,
   crearCurso,
   eliminarCurso,
   listarCurso,
   listarCursos
-} from '../controllers/tareas.controller.js'
-import { isAuth } from '../middlewares/auth.middleware.js'
+} from '../controller/cursos.controller.js';
+import { isAuth } from '../middlewares/auth.middleware.js';
 
-const router = Router()
+const router = Router();
 
-router.get('/tareas', isAuth, listarCursos)
+router.get('/cursos', isAuth, listarCursos);
 
-router.get('/tareas/:id', isAuth, listarCurso)
+router.get('/cursos/:id', isAuth, listarCurso);
 
-router.post('/tareas', isAuth, crearCurso)
+router.post('/cursos', crearCurso);
 
-router.put('/tareas/:id', isAuth, actualizarCurso)
+router.put('/cursos/:id', isAuth, actualizarCurso);
 
-router.delete('/tareas/:id', isAuth, eliminarCurso)
+router.delete('/cursos/:id', isAuth, eliminarCurso);
 
-export default router
+export default router;
