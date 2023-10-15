@@ -18,8 +18,12 @@ Nuestra visión es revolucionar la educación, y lo hacemos a través de un tuto
 
 ## El Equipo
 
-![integrantes1](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/fc2cb431-dc95-43a4-a912-8905a3744af7)
-![integrantes2](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/88f78f37-54fa-4ae3-aebf-aad4d00c1ffe)
+![integrantes1](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/d37c65ec-fa52-4dec-a258-fd22a1b0778b)
+
+
+![integrantes2](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/574310a3-3611-4dc4-9922-30322b21da12)
+
+
 
 
 Este proyecto es el resultado del esfuerzo y dedicación de un equipo diverso y apasionado. ¡Conócenos! 😃👋
