@@ -1,13 +1,13 @@
 import { pool } from '../../db.js';
 
 export const listarCursos = async (req, res) => {
-    const resultado = await pool.query('SELECT  * FROM cursos');
-    console.log(resultado);
+    const resultado = await pool.query('SELECT * FROM cursos WHERE WHERE userId = $1', [req.userId]);
+    //console.log(userId);
     return res.json(resultado.rows);
 };
 
 export const listarCurso = async (req, res) => {
-    const resultado = await pool.query('SELECT * FROM cursos WHERE id = $1', [req.params.id]);
+    const resultado = await pool.query('SELECT * FROM cursos WHERE = $1', [req.params.id]);
     if (resultado.rowCount === 0) {
         return res.status(404).json({
             message: 'La entrada no existe'
