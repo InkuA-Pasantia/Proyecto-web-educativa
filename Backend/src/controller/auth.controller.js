@@ -1,25 +1,39 @@
 import { pool } from "../../db.js";
 import bcrypt from "bcrypt";
+import { createAcessToken } from "../libs/jwt.js";
+import md5 from "md5";
 
 export const signin = (req, res) => res.send('ingresando');
 
-export const signup = async (req, res) => {
-    const { nombre, apellido, edad, username, email, pass, cellphone, rol } = req.body;
+export const signup = async (req, res, next) => {
+    const { nombre, apellido, edad, username, email, pass, cellphone, birthday, rol } = req.body;
     //console.log(name, email, password);
     //res.send('Registrado');
 
     try {
         //const hashedPassword = await bcrypt.hash(pass, 10);
         //console.log(hashedPassword);
-
-        const result = await pool.query("INSERT INTO usuarios (nombre, apellido, edad, username, email, pass, cellphone, rol) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) Returning * ", [nombre, apellido, edad, username, email, pass, cellphone, rol]);
+        const hashedPassword = await bcrypt.hash(pass, 10); //entre 10 y 15 veces se repite el algoritmo
+        const gravatar = "https://gravatar.com/avatar/" + md5(email);
+        //insertamos los datos del registro en la bd
+        const result = await pool.query("INSERT INTO usuarios (nombre, apellido, edad, username, email, pass, cellphone, birthday, rol, gravatar) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *", [nombre, apellido, edad, username, email, hashedPassword, cellphone, birthday, rol, gravatar]);
+        const token = await createAcessToken({ id: result.rows[0].id }); //podemos guardar id, name, email siempre separando por coma
+        
+        //const result = await pool.query("INSERT INTO usuarios (nombre, apellido, edad, username, email, pass, cellphone, rol) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) Returning * ", [nombre, apellido, edad, username, email, pass, cellphone, rol]);
         console.log(result);
+        res.cookie("token", token, {
+            httpOnly: true, //solo se puede abrir con http y no con js
+            //secure: false, solo páginas seguras o https
+            sameSite: "none", //si el back está en un dominio y el front en el otro, lo vé igual
+            maxAge: 60 * 60 * 24 * 1000, //en milisegundos es un día
+        });
         return res.json(result.rows[0]);
         
     } catch (error) {
         if(error.code === "23505"){
             return res.status(400).json({mesage: "El correo ya esta registrado"});
         }
+        next(error);
     }
 };
 
