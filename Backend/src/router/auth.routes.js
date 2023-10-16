@@ -11,7 +11,7 @@ const router = Router();
 
 router.post('/signin', signin);
 
-router.post('/signup', signup);
+router.post('/signup', isAuth, signup);
 
 router.post('/signout', signout);
 
