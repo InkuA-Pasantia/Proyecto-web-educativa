@@ -14,9 +14,9 @@ export const signup = async (req, res, next) => {
         //const hashedPassword = await bcrypt.hash(pass, 10);
         //console.log(hashedPassword);
         const hashedPassword = await bcrypt.hash(pass, 10); //entre 10 y 15 veces se repite el algoritmo
-        const gravatar = "https://gravatar.com/avatar/" + md5(email);
+        //const gravatar = "https://gravatar.com/avatar/" + md5(email);
         //insertamos los datos del registro en la bd
-        const result = await pool.query("INSERT INTO usuarios (nombre, apellido, edad, username, email, pass, cellphone, birthday, rol, gravatar) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING *", [nombre, apellido, edad, username, email, hashedPassword, cellphone, birthday, rol, gravatar]);
+        const result = await pool.query("INSERT INTO usuarios (nombre, apellido, edad, username, email, pass, cellphone, birthday, rol) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING *", [nombre, apellido, edad, username, email, hashedPassword, cellphone, birthday, rol]);
         const token = await createAcessToken({ id: result.rows[0].id }); //podemos guardar id, name, email siempre separando por coma
         
         //const result = await pool.query("INSERT INTO usuarios (nombre, apellido, edad, username, email, pass, cellphone, rol) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) Returning * ", [nombre, apellido, edad, username, email, pass, cellphone, rol]);
@@ -37,7 +37,7 @@ export const signup = async (req, res, next) => {
     }
 };
 
-export const signout = (req, res) => res.send('Cerrando sesion');
+export const signout = (req, res) => res.send('Cerrando sesion'); //Gabriel
 
 export const profile = (req, res) => res.send('Perfil del usuario');
 

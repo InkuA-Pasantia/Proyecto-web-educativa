@@ -1,7 +1,7 @@
 import { pool } from '../../db.js';
 
 export const listarCursos = async (req, res) => {
-    const resultado = await pool.query('SELECT * FROM cursos WHERE WHERE userId = $1', [req.userId]);
+    const resultado = await pool.query('SELECT * FROM cursos');
     //console.log(userId);
     return res.json(resultado.rows);
 };
@@ -39,9 +39,9 @@ export const crearCurso = async (req, res, next) => {
 };
 
 export const actualizarCurso = async (req, res) => {
-    const { nombreCurso, descripcion } = req.body;
+    const { nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido } = req.body;
     const id = req.params.id;
-    const result = await pool.query('UPDATE cursos SET nombreCurso = $1, descripcion = $2 WHERE id = $3 RETURNING *', [nombreCurso, descripcion, id]);
+    const result = await pool.query('UPDATE cursos SET nombreCurso = $1, lenguaje = $2, duracion = $3, estrellas = $4, dificultad = $5, descripcion = $6, contenido = $7 WHERE id = $8 RETURNING *', [nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido, id]);
 
     if (result.rowCount === 0) {
         return res.status(404).json({
