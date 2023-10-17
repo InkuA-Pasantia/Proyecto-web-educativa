@@ -18,5 +18,6 @@ CREATE TABLE usuarios(
     email VARCHAR(255) UNIQUE NOT NULL,
     pass VARCHAR(255) NOT NULL,
     cellphone INT,
-    rol TEXT,
+    birthday TEXT,
+    rol TEXT
 );

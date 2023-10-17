@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 
-export const createAcessToken = (paylod)=>{ //generalmente se llama paylod
+export const createAccessToken = (paylod)=>{ //generalmente se llama paylod
     return new Promise((resolve, reject) => {
         jwt.sign(paylod, "xyz123", {expiresIn: "1d"},
         (err, token) => {
@@ -10,4 +10,4 @@ export const createAcessToken = (paylod)=>{ //generalmente se llama paylod
     });
     
 
-}
+};
