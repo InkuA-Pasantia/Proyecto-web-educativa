@@ -7,7 +7,7 @@ export const listarCursos = async (req, res) => {
 };
 
 export const listarCurso = async (req, res) => {
-    const resultado = await pool.query('SELECT * FROM cursos WHERE = $1', [req.params.id]);
+    const resultado = await pool.query('SELECT * FROM cursos WHERE id = $1', [req.params.id]);
     if (resultado.rowCount === 0) {
         return res.status(404).json({
             message: 'La entrada no existe'
