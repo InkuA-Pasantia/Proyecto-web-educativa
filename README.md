@@ -1,6 +1,7 @@
 # Proyecto Educativo con Tutor de IA 
 
-![banner](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/e3cd2624-a3bc-4688-b2f0-db7a03e5e09a)
+
+![banner](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/d078e079-56b4-4677-86e8-9bd66e48d5f8)
 
 ¡Bienvenidos a nuestro innovador proyecto educativo! Aquí, combinamos la magia de la inteligencia artificial con el arte de la enseñanza, ¡y todo esto respaldado por un equipo apasionado! 🚀📚
 
@@ -18,12 +19,11 @@ Nuestra visión es revolucionar la educación, y lo hacemos a través de un tuto
 
 ## El Equipo
 
-![integrantes1](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/d37c65ec-fa52-4dec-a258-fd22a1b0778b)
+
+![integrantes1](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/57e96ff6-3b78-4d0b-b6fa-cb8ad43109d4)
 
 
-![integrantes2](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/574310a3-3611-4dc4-9922-30322b21da12)
-
-
+![integrantes2](https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/259cf3fe-4ab2-4c69-a4bd-5f498ddce655)
 
 
 Este proyecto es el resultado del esfuerzo y dedicación de un equipo diverso y apasionado. ¡Conócenos! 😃👋
@@ -41,7 +41,8 @@ Este proyecto es el resultado del esfuerzo y dedicación de un equipo diverso y 
 Gracias por visitar nuestro repositorio y por tu interés en nuestro proyecto educativo. ¡Juntos, estamos impulsando la innovación en la educación! ✨📚🤖🌟
 
 
-<p align="right"><img src="https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/22e0c0fc-5d33-464d-9048-f1704ed3a03b" alt="robot" width="10%" height="100">
+<p align="center"><img src="https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/cb7ffea7-22b2-4de9-b5db-5fbf0f16e0c5" alt="robot" width="11%" height="90">
 </p>
+
 
 
