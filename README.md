@@ -41,7 +41,7 @@ Este proyecto es el resultado del esfuerzo y dedicación de un equipo diverso y 
 Gracias por visitar nuestro repositorio y por tu interés en nuestro proyecto educativo. ¡Juntos, estamos impulsando la innovación en la educación! ✨📚🤖🌟
 
 
-<p align="right"><img src="https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/0d8c8583-5ad8-4172-b462-d9a4c0708c04" alt="robot" width="9%" height="95">
+<p align="center"><img src="https://github.com/InkuA-Pasantia/Proyecto-web-educativa/assets/77640142/cb7ffea7-22b2-4de9-b5db-5fbf0f16e0c5" alt="robot" width="11%" height="90">
 </p>
 
 
