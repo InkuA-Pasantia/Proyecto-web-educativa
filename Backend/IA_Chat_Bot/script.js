@@ -3,7 +3,13 @@ const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
 
 let userText = null;
-const API_KEY = "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"; //Insert Key like : "KEY_HERE"; 
+const API_KEY = key(); //Insert Key like : "KEY_HERE"; 
+
+const loadDataFromLocalstorage = () => {
+    chatContainer.innerHTML = localStorage.getItem("all-chats");
+};
+
+loadDataFromLocalstorage();
 
 const createElement = (html, className) => {
     //Create new div and apply chat, specified class and set html content of div
@@ -42,9 +48,10 @@ const getChatResponse = async (incomingChatDiv) => {
     } catch (error) {
         console.log(error);
     }
-
+    // Remove the typing animation, append the paragraph element and save the chats to local storage
     incomingChatDiv.querySelector(".typing-animation").remove();
     incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
+    localStorage.setItem("all-chats", chatContainer.innerHTML);
 };
 
 const copyResponse = (copyBtn) => {
@@ -52,8 +59,8 @@ const copyResponse = (copyBtn) => {
     const responseTextElement = copyBtn.parentElement.querySelector("p");
     navigator.clipboard.writeText(responseTextElement.textContent);
     copyBtn.textContent = "done";
-    setTimeout(() => copyBtn.textContent = "content_copy", 1000)
-}
+    setTimeout(() => copyBtn.textContent = "content_copy", 1000);
+};
 
 const showTypingAnimation = () => {
     const html = ` <div class="chat-content">
