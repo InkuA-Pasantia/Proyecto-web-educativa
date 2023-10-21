@@ -8,7 +8,7 @@ CREATE TABLE cursos (
     descripcion VARCHAR(500),
     contenido TEXT
 );
-
+ALTER TABLE cursos ADD COLUMN usuario_id INTEGER REFERENCES usuarios(id);
 CREATE TABLE usuarios(
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(255) NOT NULL,
@@ -21,3 +21,4 @@ CREATE TABLE usuarios(
     birthday TEXT,
     rol TEXT
 );
+ALTER TABLE usuarios ADD COLUMN GRAVATAR VARCHAR(255);
