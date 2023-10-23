@@ -111,7 +111,27 @@
                   <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>
                   <a class="dropdown-item" href="#">¿Sos nuevo aqui? Registrarme</a>                  
               </div>  
-          </div>           
+          </div> 
+
+          <!-- Olvidé: con Javascript se apaga un boton y se enciende el otro-->
+          <div class="dropdown nav-item nav-link">
+            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Recuperar
+            </button> 
+
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
+                  <form class="px-4 py-3">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Ingresa tu e-mail</label>
+                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
+                    </div>            
+                    <button type="submit" class="btn btn-primary">Recuperar ></button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Ya soy usuario</a>
+                  <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>                                    
+              </div>  
+          </div>     
       </nav>
     </div>
     <!-- Navbar End -->
