@@ -1,9 +1,23 @@
 const chatInput = document.querySelector("#chat-input");
 const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
+const themeButton = document.querySelector("#theme-btn");
 
 let userText = null;
-const API_KEY = "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"; //Insert Key like : "KEY_HERE"; 
+const API_KEY = key(); //Insert Key like : "KEY_HERE"; 
+
+const loadDataFromLocalstorage = () => {
+    const themeColor = localStorage.getItem("theme-color");
+
+    document.body.classList.toggle("light-mode", themeColor === "light_mode");
+    localStorage.setItem("theme-color", themeButton.innerText);
+    themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
+
+    chatContainer.innerHTML = localStorage.getItem("all-chats");
+    chatContainer.scrollTo(0, chatContainer.scrollHeight);
+};
+
+loadDataFromLocalstorage();
 
 const createElement = (html, className) => {
     //Create new div and apply chat, specified class and set html content of div
@@ -42,9 +56,11 @@ const getChatResponse = async (incomingChatDiv) => {
     } catch (error) {
         console.log(error);
     }
-
+    // Remove the typing animation, append the paragraph element and save the chats to local storage
     incomingChatDiv.querySelector(".typing-animation").remove();
     incomingChatDiv.querySelector(".chat-details").appendChild(pElement);
+    chatContainer.scrollTo(0, chatContainer.scrollHeight);
+    localStorage.setItem("all-chats", chatContainer.innerHTML);
 };
 
 const copyResponse = (copyBtn) => {
@@ -52,8 +68,8 @@ const copyResponse = (copyBtn) => {
     const responseTextElement = copyBtn.parentElement.querySelector("p");
     navigator.clipboard.writeText(responseTextElement.textContent);
     copyBtn.textContent = "done";
-    setTimeout(() => copyBtn.textContent = "content_copy", 1000)
-}
+    setTimeout(() => copyBtn.textContent = "content_copy", 1000);
+};
 
 const showTypingAnimation = () => {
     const html = ` <div class="chat-content">
@@ -71,6 +87,7 @@ const showTypingAnimation = () => {
     // Create an incoming chat div with user`s messageand append it to the chat container
     const incomingChatDiv = createElement(html, "incoming");
     chatContainer.appendChild(incomingChatDiv);
+    chatContainer.scrollTo(0, chatContainer.scrollHeight);
     getChatResponse(incomingChatDiv);
 };
 
@@ -90,8 +107,16 @@ const handleOutgoingChat = () => {
     const outgoingChatDiv = createElement(html, "outgoing");
     outgoingChatDiv.querySelector("p").textContent = userText;
     chatContainer.appendChild(outgoingChatDiv);
+    chatContainer.scrollTo(0, chatContainer.scrollHeight);
     setTimeout(showTypingAnimation, 500);
 };
+
+themeButton.addEventListener("click", () =>{
+    // Toggle body's class for the theme mode and save the updated theme to the local storage
+    document.body.classList.toggle("light-mode");
+    localStorage.setItem("theme-color", themeButton.innerText);
+    themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
+});
 
 
 sendButton.addEventListener("click", handleOutgoingChat);
