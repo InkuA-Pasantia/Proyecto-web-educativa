@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>KidKinder - Kindergarten Website Template</title>
+    <title>Open Code Academy - Inicio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -46,7 +46,7 @@
           style="font-size: 50px"
         >
           <i class="flaticon-043-teddy-bear"></i>
-          <span class="text-primary">KidKinder</span>
+          <span class="text-primary">Open Code Academy</span>
         </a>
         <button
           type="button"
@@ -61,27 +61,57 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.html" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="class.html" class="nav-item nav-link">Classes</a>
-            <a href="team.html" class="nav-item nav-link">Teachers</a>
+            <a href="index.html" class="nav-item nav-link active">Inicio</a>
+            <a href="about.html" class="nav-item nav-link">Nosotros</a>
+            <a href="class.html" class="nav-item nav-link">Cursos</a>
+            <a href="team.html" class="nav-item nav-link">Opiniones</a>
             <a href="gallery.html" class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
               <a
                 href="#"
                 class="nav-link dropdown-toggle"
                 data-toggle="dropdown"
-                >Pages</a
+                >Mis cursos</a
               >
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                <a href="blog.html" class="dropdown-item">HTML5</a>
+                <a href="single.html" class="dropdown-item">CSS</a>
               </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
+            <a href="contact.html" class="nav-item nav-link">Contacto</a>
           </div>
-          <a href="" class="btn btn-primary px-4">Join Class</a>
-        </div>
+
+          <div class="dropdown nav-item nav-link">
+            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Loguin
+            </button> 
+              <!-- Formulario Loguin / Registro -->
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
+                  <form class="px-4 py-3">
+                    <div class="form-group">
+                      <label for="exampleDropdownFormEmail1">Usuario</label>
+                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleDropdownFormPassword1">Contraseña</label>
+                      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          Recordarme
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Loguin ></button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>
+                  <a class="dropdown-item" href="#">¿Sos nuevo aqui? Registrarme</a>                  
+              </div>  
+          </div>         
+
       </nav>
     </div>
     <!-- Navbar End -->
