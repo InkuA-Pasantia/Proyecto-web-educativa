@@ -67,6 +67,9 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
+.container-fluid{
+  background-color: #F5CBA7;
+}
 
 hr {
   box-sizing: content-box;
@@ -152,7 +155,7 @@ sup {
 }
 
 a {
-  color: #17a2b8;
+  color: #0f6674 ;
   text-decoration: none;
   background-color: transparent;
 }
