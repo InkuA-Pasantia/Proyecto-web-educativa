@@ -32,15 +32,14 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/Navbar.css" rel="stylesheet" />
+
   </head>
 
   <body>
     <!-- Navbar Start -->
-    <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
-      <nav
-        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
-      >
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
         <a
           href=""
           class="navbar-brand font-weight-bold text-secondary"
@@ -57,152 +56,237 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-between"
-          id="navbarCollapse"
-        >
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav font-weight-bold mx-auto py-0">
             <a href="index.html" class="nav-item nav-link active">Inicio</a>
             <a href="about.html" class="nav-item nav-link">Nosotros</a>
             <a href="class.html" class="nav-item nav-link">Cursos</a>
             <a href="team.html" class="nav-item nav-link">Opiniones</a>
             <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                >Mis cursos</a
-              >
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mis cursos</a>
               <div class="dropdown-menu rounded-0 m-0">
                 <a href="blog.html" class="dropdown-item">HTML5</a>
                 <a href="single.html" class="dropdown-item">CSS</a>
               </div>
             </div>
             <a href="contact.html" class="nav-item nav-link">Contacto</a>
-          </div>
-          <!-- Formulario Loguin -->
-          <div class="dropdown nav-item nav-link">
-            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Loguin
-            </button>
-            </button> 
-              <!-- Formulario Loguin / Registro -->
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                  <form class="px-4 py-3">
-                    <div class="form-group">
-                      <label for="exampleDropdownFormEmail1">Usuario</label>
-                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleDropdownFormPassword1">Contraseña</label>
-                      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                          Recordarme
-                        </label>
+
+            <!-- modal --> 
+            <button type="button" class="btn btn-primary px-4" data-toggle="modal" data-target="#login" data-whatever="@mdo">Log-in</button>
+
+            <!-- Log in-->
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Loguin</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="px-4 py-3">
+                      <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Usuario</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
                       </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Loguin ></button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>
-                  <a class="dropdown-item" href="#">¿Sos nuevo aqui? Registrarme</a>                  
-              </div>  
-          </div> 
-          <!-- Rwcuperar: con Javascript se apaga un boton y se enciende el otro-->
-          <div class="dropdown nav-item nav-link">
-            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Recuperar
-            </button> 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                  <form class="px-4 py-3">
-                    <div class="form-group">
-                      <label for="exampleDropdownFormEmail1">Ingresa tu e-mail</label>
-                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
-                    </div>            
-                    <button type="submit" class="btn btn-primary">Recuperar ></button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Ya soy usuario</a>
-                  <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>                                    
-              </div>  
-          </div> 
-          <!-- Registro-->
-          <div class="dropdown nav-item nav-link">
-            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Registro
-            </button> 
-              <!-- Formulario Loguin / Registro  -->
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="min-width: 16rem; background-color: #0f6674; color:white">  
-                  <form class="px-4 py-3 needs-validation " novalidate>
-                    <div class="form-row">
-                      <div class="">
-                        <label for="validationCustom01">Nombre</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="tu nombre" required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                      </div>                      
-                      <div class="">
-                        <label for="validationCustom02">Apellido</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="tu apellido" required>
-                        <div class="valid-feedback">
-                          Looks good!
+                      <div class="form-group">
+                        <label for="exampleDropdownFormPassword1">Contraseña</label>
+                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                          <label class="form-check-label" for="dropdownCheck">
+                            Recordarme
+                          </label>
                         </div>
                       </div>
-                      <div class="">
-                        <label for="validationCustomUsername">Usuario</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                      <button type="submit" class="btn btn-primary">Loguin ></button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#recuperar">¿ Olvidste tu contraseña ?</button>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#registro">¿ Sos nuevo aqui ? Registrarme</button>                    
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Recuperar-->
+            <div class="modal fade" id="recuperar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Recuperar Contraseña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="px-4 py-3">
+                      <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Ingresa tu e-mail</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
+                      </div>            
+                      <button type="submit" class="btn btn-primary">Recuperar ></button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#login">Ya soy usuario</button>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#registro">¿ Sos nuevo aqui ? Registrarme</button> 
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Registrar-->
+            <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body form-registro">
+                    <form class="px-4 py-3 needs-validation " novalidate>
+                      <div class="form-row">
+                        <div class="box-imp">
+                          <label for="validationCustom01">Nombre</label>
+                          <input type="text" class="form-control" id="validationCustom01" placeholder="tu nombre" required>
+                          <div class="valid-feedback">
+                            Correcto!
                           </div>
-                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
                           <div class="invalid-feedback">
-                            Please choose a username.
+                            Ingrese su Nombre, por favor!
+                          </div>
+                        </div>                      
+                        <div class="box-imp">
+                          <label for="validationCustom02">Apellido</label>
+                          <input type="text" class="form-control" id="validationCustom02" placeholder="tu apellido" required>
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Ingrese su Apellido, por favor!
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationCustomUsername">Usuario</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
+                            <div class="valid-feedback">
+                              Correcto!
+                            </div>
+                            <div class="invalid-feedback">
+                              Ingrese su Usuario, por favor!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationEmail">E-mail</label>
+                          <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Ingrese su E-mail, por favor!
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationCustomPass1">Contraseña</label>
+                          <input type="password" class="form-control" id="validationCustomPass1" placeholder="Contraseña">
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Ingrese su Contraseña, por favor!
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationCustomPass2">Repetir Contraseña</label>
+                          <input type="password" class="form-control" id="validationCustomPass2" placeholder="Contraseña">
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Reingrese su Contraseña, por favor!
                           </div>
                         </div>
                       </div>
-                      <div class="">
-                        <label for="validationEmail">E-mail</label>
-                        <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>
-                        <div class="valid-feedback">
-                          Looks good!
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                          <label class="form-check-label" for="dropdownCheck">
+                            Recordarme
+                          </label>
                         </div>
                       </div>
-                      <div class="">
-                        <label for="validationCustomPass1">Contraseña</label>
-                        <input type="password" class="form-control" id="validationCustomPass1" placeholder="Contraseña">
-                        <div class="invalid-feedback">
-                          Por favor ingrese su contraseña.
-                        </div>
-                      </div>
-                      <div class="">
-                        <label for="validationCustomPass2">Repetir Contraseña</label>
-                        <input type="password" class="form-control" id="validationCustomPass2" placeholder="Contraseña">
-                        <div class="invalid-feedback">
-                          Por favor ingrese su contraseña.
-                        </div>
-                      </div>
+                      <button type="submit" class="btn btn-primary">Registrarme ></button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <button type="button" class="btn btn-secondary vuelve" data-dismiss="modal" data-toggle="modal" data-target="#login"> < Ya soy usuario</button>
+                  </div>                  
+                </div>
+              </div>
+            </div>
+            
+            <!-- LOGUIN             
+            <div class="dropdown nav-item nav-link" id="form-loguin">
+              <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Login
+              </button>
+               Formulario de Loguin
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
+                <form class="px-4 py-3">
+                  <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Usuario</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Contraseña</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                  </div>
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                      <label class="form-check-label" for="dropdownCheck">
+                        Recordarme
+                      </label>
                     </div>
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                          Recordarme
-                        </label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Registrarme ></button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" style="color: white; aquamarine" onmouseover="this.style='background-color:aquamarine;';" onmouseout="this.style='background-color:#0f6674; color:white';" href="#">Ya soy usuario</a>                                    
-              </div>  
-          </div>          
-          </div>     
-          </div> 
+                  </div>
+                  <button type="submit" class="btn btn-primary">Loguin ></button>
+                </form>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item btn-recuperar" id="btn-recuperar" href="#">Olvidaste tu contraseña?</a>
+                <a class="dropdown-item btn-registrarme " href="#">¿Sos nuevo aqui? Registrarme</a>                  
+              </div>
+            </div> 
+          -->
+
+            <!-- RECUPERAR 
+            <div class="dropdown nav-item nav-link " id="form-recuperar">
+              <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Recuperar
+              </button> 
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
+                    <form class="px-4 py-3">
+                      <div class="form-group">
+                        <label for="exampleDropdownFormEmail1">Ingresa tu e-mail</label>
+                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
+                      </div>            
+                      <button type="submit" class="btn btn-primary">Recuperar ></button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item btn-loguin" href="#">Ya soy usuario</a>
+                    <a class="dropdown-item btn-registrarme " href="#">¿Sos nuevo aqui? Registrarme</a>                                     
+                </div>  
+            </div> 
+          </div>-->      
+        </div> 
       </nav>
     </div>
     <!-- Navbar End -->
@@ -356,7 +440,7 @@
                 </div>
                 <div class="row border-bottom">
                   <div class="col-6 py-1 text-right border-right">
-                    <strong>Hoarios</strong>
+                    <strong>Horarios</strong>
                   </div>
                   <div class="col-6 py-1">24 hs</div>
                 </div>
@@ -978,6 +1062,11 @@
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+
+    
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
@@ -989,6 +1078,6 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-    <script src="js/loguin.js"></script>
+    <script src="js/submit.js"></script>
   </body>
 </html>
