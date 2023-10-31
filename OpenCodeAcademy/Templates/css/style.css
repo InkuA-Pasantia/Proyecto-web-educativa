@@ -67,9 +67,7 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
-.container-fluid{
-  background-color: #F5CBA7;
-}
+
 
 hr {
   box-sizing: content-box;
