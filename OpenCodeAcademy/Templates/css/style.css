@@ -67,6 +67,10 @@ body {
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }
+.navbar img {
+  width: 100px; /* Establece el ancho del logo según tus preferencias */
+  height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+}
 
 .chat-container {
   position: fixed;
