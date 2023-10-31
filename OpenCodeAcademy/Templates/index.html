@@ -72,7 +72,7 @@
             <a href="contact.html" class="nav-item nav-link">Contacto</a>
 
             <!-- modal --> 
-            <button type="button" class="btn btn-primary px-4" data-toggle="modal" data-target="#login" data-whatever="@mdo">Log-in</button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login" data-whatever="@mdo">Log-in</button>
 
             <!-- Log in-->
             <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -238,54 +238,7 @@
             <div class="dropdown nav-item nav-link" id="form-loguin">
               <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Login
-              </button>
-               Formulario de Loguin
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                <form class="px-4 py-3">
-                  <div class="form-group">
-                    <label for="exampleDropdownFormEmail1">Usuario</label>
-                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleDropdownFormPassword1">Contraseña</label>
-                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
-                  </div>
-                  <div class="form-group">
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                      <label class="form-check-label" for="dropdownCheck">
-                        Recordarme
-                      </label>
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary">Loguin ></button>
-                </form>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item btn-recuperar" id="btn-recuperar" href="#">Olvidaste tu contraseña?</a>
-                <a class="dropdown-item btn-registrarme " href="#">¿Sos nuevo aqui? Registrarme</a>                  
-              </div>
-            </div> 
-          -->
-
-            <!-- RECUPERAR 
-            <div class="dropdown nav-item nav-link " id="form-recuperar">
-              <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Recuperar
-              </button> 
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                    <form class="px-4 py-3">
-                      <div class="form-group">
-                        <label for="exampleDropdownFormEmail1">Ingresa tu e-mail</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
-                      </div>            
-                      <button type="submit" class="btn btn-primary">Recuperar ></button>
-                    </form>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item btn-loguin" href="#">Ya soy usuario</a>
-                    <a class="dropdown-item btn-registrarme " href="#">¿Sos nuevo aqui? Registrarme</a>                                     
-                </div>  
-            </div> 
-          </div>-->      
+              </button>  -->            
         </div> 
       </nav>
     </div>
@@ -297,26 +250,40 @@
         <div class="col-lg-6 text-center text-lg-left">
           <h4 class="text-white mb-4 mt-5 mt-lg-0"> <br>¡Aprendé a programar!</h4>
           <h1 class="display-3 font-weight-bold text-white">
-            Educación Socialmente Consciente
+            Códigos sin Distracciones
           </h1>
-          <p class="text-white mb-4">
-            Creemos en la educación como una fuerza para el cambio social. 
-            Al unirte a nosotros, te unes a una comunidad comprometida con la equidad educativa y el impacto positivo.
-            Cada curso que tomas contribuye a nuestros programas de educación socialmente consciente, ayudando a proporcionar acceso 
-            a la educación a aquellos que más lo necesitan. Juntos, estamos construyendo un futuro educativo más igualitario.
+          <p class="text-white mb-5">
+            <h5>Programación para personas con TDA/H</h5>
           </p>
           
         </div>
         <div class="col-lg-6 text-center text-lg-right">
-          <img class="img-fluid mt-5" src="img/personas.code2.jpg" alt="" />
+          <img class="img-fluid mt-5" src="" alt="" width="310 px" />
         </div>
       </div>
     </div>
     <!-- Header End -->
 
-    <!-- Facilities Start -->
-   
-    <!-- Facilities Start -->
+    <!-- Contenedor del chat bot flotante -->
+    <div class="chat-container">
+      <div class="chat-icon">
+          <img src="img/bot.jpg" alt="Chat Icon">
+      </div>
+      <div class="chat-box">
+          <div class="chat-header">
+              Robo Tino
+              <span class="close-btn">&times;</span>
+          </div>
+          <div class="chat-body">
+              <!-- Aquí se mostrarán los mensajes del chat -->
+          </div>
+          <div class="chat-footer">
+              <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+              <button id="send-btn">Enviar</button>
+          </div>
+      </div>
+    </div>  
+  <!-- FIN Contenedor del chat bot flotante -->  
 
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -498,86 +465,7 @@
     </div>
     <!-- Class End -->
 
-    <!-- Registration Start -->
-    <div class="container-fluid py-5">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-7 mb-5 mb-lg-0">
-            <p class="section-title pr-5">
-              <span class="pr-2">Book A Seat</span>
-            </p>
-            <h1 class="mb-4">Book A Seat For Your Kid</h1>
-            <p>
-              Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
-              dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
-              Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-              dolor
-            </p>
-            <ul class="list-inline m-0">
-              <li class="py-2">
-                <i class="fa fa-check text-success mr-3"></i>Labore eos amet
-                dolor amet diam
-              </li>
-              <li class="py-2">
-                <i class="fa fa-check text-success mr-3"></i>Etsea et sit dolor
-                amet ipsum
-              </li>
-              <li class="py-2">
-                <i class="fa fa-check text-success mr-3"></i>Diam dolor diam
-                elitripsum vero.
-              </li>
-            </ul>
-            <a href="" class="btn btn-primary mt-4 py-2 px-4">Book Now</a>
-          </div>
-          <div class="col-lg-5">
-            <div class="card border-0">
-              <div class="card-header bg-secondary text-center p-4">
-                <h1 class="text-white m-0">Book A Seat</h1>
-              </div>
-              <div class="card-body rounded-bottom bg-primary p-5">
-                <form>
-                  <div class="form-group">
-                    <input
-                      type="text"
-                      class="form-control border-0 p-4"
-                      placeholder="Your Name"
-                      required="required"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <input
-                      type="email"
-                      class="form-control border-0 p-4"
-                      placeholder="Your Email"
-                      required="required"
-                    />
-                  </div>
-                  <div class="form-group">
-                    <select
-                      class="custom-select border-0 px-4"
-                      style="height: 47px"
-                    >
-                      <option selected>Select A Class</option>
-                      <option value="1">Class 1</option>
-                      <option value="2">Class 1</option>
-                      <option value="3">Class 1</option>
-                    </select>
-                  </div>
-                  <div>
-                    <button
-                      class="btn btn-secondary btn-block border-0 py-3"
-                      type="submit"
-                    >
-                      Book Now
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   S
     <!-- Registration End -->
 
     <!-- Team Start -->
@@ -728,9 +616,9 @@
       <div class="container p-0">
         <div class="text-center pb-2">
           <p class="section-title px-5">
-            <span class="px-2">Testimonial</span>
+            <span class="px-2">Opiniones</span>
           </p>
-          <h1 class="mb-4">What Parents Say!</h1>
+          <h1 class="mb-4">Que dicen nuestros alumnos!</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">
           <div class="testimonial-item px-3">
@@ -747,8 +635,8 @@
                 alt="Image"
               />
               <div class="pl-3">
-                <h5>Parent Name</h5>
-                <i>Profession</i>
+                <h5>Gabriel</h5>
+                <i>Full Stack</i>
               </div>
             </div>
           </div>
@@ -766,8 +654,8 @@
                 alt="Image"
               />
               <div class="pl-3">
-                <h5>Parent Name</h5>
-                <i>Profession</i>
+                <h5>Noelia</h5>
+                <i>Fronted</i>
               </div>
             </div>
           </div>
@@ -1078,6 +966,19 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+<<<<<<< HEAD
     <script src="js/submit.js"></script>
+=======
+    <script src="js/loguin.js"></script>
+
+    <!--  Start Music-->    
+    <audio id="miAudio" controls>
+      <source src="Music/(relax)musica para reiki - relajacion y meditacion - 10 - fluye la energía(1).mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+  </audio>
+    <script src="script.js"></script>
+    </div>   
+    <!-- Start Music -->
+>>>>>>> efc891ad5d7db9b92be1a3354c7436872cd46001
   </body>
 </html>
