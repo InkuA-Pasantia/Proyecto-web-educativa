@@ -2,15 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>GOC </title>
+    <title>KidKinder - Kindergarten Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
-    
-    <link rel="icon" href="img/icon1.jpeg">
 
     <!-- Favicon -->
-    
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -39,8 +37,6 @@
   <body>
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
-      <!-- Navbar Start -->
-    <div class="container-fluid bg-light position-relative shadow">
       <nav
         class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
       >
@@ -66,9 +62,8 @@
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
             <a href="index.html" class="nav-item nav-link active">Inicio</a>
-            <a href="about.html" class="nav-item nav-link">Nosotros</a>
-            <a href="class.html" class="nav-item nav-link">Cursos</a>
-            <a href="team.html" class="nav-item nav-link">Opiniones</a>
+            <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
+            <a href="cursos.html" class="nav-item nav-link">Cursos</a>
             <div class="nav-item dropdown">
               <a
                 href="#"
@@ -77,11 +72,11 @@
                 >Mis cursos</a
               >
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="blog.html" class="dropdown-item">HTML5</a>
-                <a href="single.html" class="dropdown-item">CSS</a>
+                <a href="C_html.html" class="dropdown-item">HTML5</a>
+                <a href="C_css.html" class="dropdown-item">CSS</a>
               </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+            <a href="contacto.html" class="nav-item nav-link">Contacto</a>
           </div>
           <!-- Formulario Loguin -->
           <div class="dropdown nav-item nav-link">
@@ -208,72 +203,147 @@
           </div> 
       </nav>
     </div>
-    
     <!-- Navbar End -->
 
-    
-    <!-- Header End -->
     <!-- Header Start -->
     <div class="container-fluid bg-primary mb-5">
-      <div class="row">
-        <div class="col-4 mt-3">
-        <!---- inicio de card -->
-          <div class="card" style="width: 18rem;">
-            <img src="img/img12.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Nuestra Objetivo</h5>
-                <p class="card-text">Desarrollar paginas intuitivas y Profesional</p>
-                <a href="#" class="btn btn-primary">PROFESIONALISMO</a>
-              </div>
-          </div>      
-      </div>        <!--fin de card1-->
-        
-      <div class="col-4 mt-3">
-          <!---- inicio de card -->
-        <div class="card" style="width: 18rem; ">
-          <img class="img-fluid"src="img/img11.png" " alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Nuestra Vision</h5>
-              <p class="card-text">Es una educacion digital sin barreras ni limites</p>
-              <a href="#" class="btn btn-primary">Inclusiva</a>
-            </div>
-          </div>
-      </div> <!--fin de card2-->
-        
-      <div class="col-4 mt-3">
-        <!---- inicio de card -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/img6.png"  alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Integridad</h5>
-            <p class="card-text">Trabajar para vivir </p>
-            <a href="#" class="btn btn-primary">Equidad</a>
-          </div>
-        </div>
-          <!--fin fin de card-->
-      </div>
-    </div>    
-        
-     <section class="row mt-1"> 
       <div
         class="d-flex flex-column align-items-center justify-content-center"
         style="min-height: 400px"
       >
-      <h1 class="row align-center mt-5 mb-5">NUESTRO GRUPO</h1>
-        <img
-         class="img-fluid rounded mb-5 mb-lg-0"
-           src="img/grupo1.png"  alt=""/>
-        <h1 class="display-5 font-weight-bold text-white">Somos un equipo pequeño con resultados grandes </h1> <!--aca cambio de h3 por h1-->
+        <h3 class="display-3 font-weight-bold text-white">Contáctenos</h3>
         <div class="d-inline-flex text-white">
-          <p class="m-0"><a class="text-white"></a>Siempre buscamos personas adecuadas para que trabajen con nosotros. Si te sientes listo para este reto, te esperamos para que te unas a nosotros a compartir la pasion por la programacion</p>
+          <p class="m-0"><a class="text-white" href="">Home</a></p>
+          <p class="m-0 px-2">/</p>
+          <p class="m-0">Contáctenos</p>
         </div>
       </div>
-    
+    </div>
+    <!-- Header End -->
 
-    <!-- About Start -->
-    
-    <!-- Team Start -->
-    <!-- Team End -->
+    <!-- Contact Start -->
+    <div class="container-fluid pt-5">
+      <div class="container">
+        <div class="text-center pb-2">
+          <p class="section-title px-5">
+            <span class="px-2">Ponerse en contacto</span>
+          </p>
+          <h1 class="mb-4">Contáctenos para cualquier consulta</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-7 mb-5">
+            <div class="contact-form">
+              <div id="success"></div>
+              <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                <div class="control-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="name"
+                    placeholder="Nombre"
+                    required="required"
+                    data-validation-required-message="por favor, escriba su nombre"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    placeholder="Email"
+                    required="required"
+                    data-validation-required-message="Por favor introduzca su correo electrónico"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="asunto"
+                    placeholder="Asunto"
+                    required="required"
+                    data-validation-required-message="Por favor ingresa un asunto"
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div class="control-group">
+                  <textarea
+                    class="form-control"
+                    rows="6"
+                    id="mensaje"
+                    placeholder="Mensaje"
+                    required="required"
+                    data-validation-required-message="Por favor ingrese su mensaje"
+                  ></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+                <div>
+                  <button
+                    class="btn btn-primary py-2 px-4"
+                    type="submit"
+                    id="sendMessageButton"
+                  >
+                    Enviar mensaje
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5 mb-5">
+            <p>
+              Labore sea amet kasd diam justo amet ut vero justo. Ipsum ut et
+              kasd duo sit, ipsum sea et erat est dolore, magna ipsum et magna
+              elitr. Accusam accusam lorem magna, eos et sed eirmod dolor est
+              eirmod eirmod amet.
+            </p>
+ <!--            <div class="d-flex">
+              <i
+                class="fa fa-map-marker-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
+                style="width: 45px; height: 45px"
+              ></i>
+             <div class="pl-3">
+                <h5>Address</h5>
+                <p>123 Street, New York, USA</p>
+              </div>
+            </div>-->
+            <div class="d-flex">
+              <i
+                class="fa fa-envelope d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
+                style="width: 45px; height: 45px"
+              ></i>
+              <div class="pl-3">
+                <h5>Email</h5>
+                <p>info@example.com</p>
+              </div>
+            </div>
+            <div class="d-flex">
+              <i
+                class="fa fa-phone-alt d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
+                style="width: 45px; height: 45px"
+              ></i>
+              <div class="pl-3">
+                <h5>Teléfono</h5>
+                <p>+012 345 67890</p>
+              </div>
+            </div>
+<!--            <div class="d-flex">
+              <i
+                class="far fa-clock d-inline-flex align-items-center justify-content-center bg-primary text-secondary rounded-circle"
+                style="width: 45px; height: 45px"
+              ></i>
+              <div class="pl-3">
+                <h5>Opening Hours</h5>
+                <strong>Sunday - Friday:</strong>
+                <p class="m-0">08:00 AM - 05:00 PM</p>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Contact End -->
 
     <!-- Footer Start -->
     <div
@@ -286,18 +356,14 @@
             class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
             style="font-size: 40px; line-height: 40px"
           >
-            
-            <img
-              class="icon1jpeg"
-              src="img/icon1.jpeg"
-              width="50px" height="50px border="2px"
-            />
-
-            <span class="text-primary mb-4">Academia</span>
+            <i class="flaticon-043-teddy-bear"></i>
+            <span class="text-white">Open Code Academy</span>
           </a>
           <p>
-            Open Code Academy, es una pagina web, desarrollada por "GOC" su objetivo es brindar curso de programcion libre para todo publico; la plaraforma se enfoca en aquellos que presentan Trastorno de Deficit de Atencion (TDA)
-          </p>
+            Es una organización de desarrollo de software con sede en Argentina
+             formada por estudiantes graduados de la carrera de Programación
+              de la UTN San Rafael Mendoza.
+<!--         </p>
           <div class="d-flex justify-content-start mt-4">
             <a
               class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
@@ -324,104 +390,19 @@
               ><i class="fab fa-instagram"></i
             ></a>
           </div>
+        </div>--> 
+        <div class="container-fluid pt-5" style="border-top: 1px solid rgba(23, 162, 184, 0.2);">
+          <p class="m-0 text-center text-white">
+            &copy;
+            <a class="text-primary font-weight-bold" href="#">Open Code Academy</a>.
+            Todos los derechos reservados.
+            Designed by
+            <a class="text-primary font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+            <br />Distributed By:
+            <a href="https://themewagon.com" target="_blank">ThemeWagon</a>
+          </p>
         </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-          <h3 class="text-primary mb-4">Contactanos</h3>
-          <div class="d-flex">
-            <h4 class="fa fa-map-marker-alt text-primary"></h4>
-            <div class="pl-3">
-              <h5 class="text-white">Direccion</h5>                            
-              <p>Madrid 123 Pinamar Buenos Aires, Argentina</p>
-            </div>
-          </div>
-          <div class="d-flex">
-            <h4 class="fa fa-envelope text-primary"></h4>
-            <div class="pl-3">
-              <h5 class="text-white">Email</h5>
-              <p>goc.devs.co@gmail.com</p>
-            </div>
-          </div>
-          <div class="d-flex">
-            <h4 class="fa fa-phone-alt text-primary"></h4>
-            <div class="pl-3">
-              <h5 class="text-white">Telefono</h5>
-              <p>+54 345 4267890</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-          <h3 class="text-primary mb-4">Quick Links</h3>
-          <div class="d-flex flex-column justify-content-start">
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Home</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>About Us</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Our Classes</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Our Teachers</a
-            >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Our Blog</a
-            >
-            <a class="text-white" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
-            >
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 mb-5">
-          <h3 class="text-primary mb-4">Por una Consulta</h3>
-          <form action="">
-            <div class="form-group">
-              <input
-                type="text"
-                class="form-control border-0 py-4"
-                placeholder="Your Name"
-                required="required"
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                class="form-control border-0 py-4"
-                placeholder="Your Email"
-                required="required"
-              />
-            </div>
-            <div>
-              <button
-                class="btn btn-primary btn-block border-0 py-3"
-                type="submit"
-              >
-                Registrate
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-      <div
-        class="container-fluid pt-5"
-        style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
-      >
-        <p class="m-0 text-center text-white">
-          &copy;
-          <a class="text-primary font-weight-bold" href="#">Your Site Name</a>.
-          All Rights Reserved.
-
-          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-          Designed by
-          <a class="text-primary font-weight-bold" href="https://htmlcodex.com"
-            >Guardians of Codes</a
-          >
-          <br/>Distribuido Por:
-          <a href="https://themewagon.com" target="_blank">GOC</a>
-        </p>
-      </div>
-    </div>
-    <!-- Footer End -->
+        
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary p-3 back-to-top"
@@ -444,3 +425,4 @@
     <script src="js/main.js"></script>
   </body>
 </html>
+
