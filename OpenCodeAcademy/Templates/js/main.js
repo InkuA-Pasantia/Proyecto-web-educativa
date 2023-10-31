@@ -97,6 +97,33 @@
             }
         }
     });
+    document.addEventListener("DOMContentLoaded", function() {
+        const chatIcon = document.querySelector(".chat-icon");
+        const chatBox = document.querySelector(".chat-box");
+        const closeBtn = document.querySelector(".close-btn");
+        const userInput = document.getElementById("user-input");
+        const sendBtn = document.getElementById("send-btn");
+        const chatBody = document.querySelector(".chat-body");
+    
+        chatIcon.addEventListener("click", function() {
+            chatBox.style.display = "block";
+        });
+    
+        closeBtn.addEventListener("click", function() {
+            chatBox.style.display = "none";
+        });
+    
+        sendBtn.addEventListener("click", function() {
+            const userMessage = userInput.value;
+            if (userMessage.trim() === "") return;
+            const userDiv = document.createElement("div");
+            userDiv.className = "user-message";
+            userDiv.textContent = userMessage;
+            chatBody.appendChild(userDiv);
+            userInput.value = "";
+            // Aquí puedes agregar la lógica del chat bot y mostrar su respuesta en el chatBody
+        });
+    });
     
 })(jQuery);
 
