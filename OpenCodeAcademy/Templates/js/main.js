@@ -19,6 +19,8 @@
     });
     
     
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 100) {
@@ -122,6 +124,19 @@
             chatBody.appendChild(userDiv);
             userInput.value = "";
             // Aquí puedes agregar la lógica del chat bot y mostrar su respuesta en el chatBody
+        });
+    });
+    document.addEventListener("DOMContentLoaded", function() {
+        var miAudio = document.getElementById("miAudio");
+    
+        // Reproducir automáticamente cuando se carga la página
+        miAudio.autoplay = true;
+    
+        // Pausar la música cuando se haga clic fuera del reproductor
+        document.addEventListener("click", function(event) {
+            if (event.target !== miAudio) {
+                miAudio.pause();
+            }
         });
     });
     
