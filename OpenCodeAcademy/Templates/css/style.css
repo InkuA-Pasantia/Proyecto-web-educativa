@@ -71,6 +71,15 @@ body {
   width: 100px; /* Establece el ancho del logo según tus preferencias */
   height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
 }
+/*.chat {
+  box-shadow: 0px 1px 10px rgb(0,0,0,0.2);
+  filter: (20px 20px 30px rgba(0, 0, 0, 0.10));
+  margin: 30px;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: default;
+  transition: all 400ms ease; 
+}*/
 
 .chat-container {
   position: fixed;
@@ -78,6 +87,7 @@ body {
   right: 20px;
   display: flex;
   flex-direction: column;
+  transition: all 400ms ease;  
 }
 
 .chat-icon {
@@ -93,8 +103,8 @@ body {
 
 .chat-box {
   display: none;
-  width: 300px;
-  height: 400px;
+  width: 100px;
+  height: 200px;
   border: 1px solid #ccc;
   border-radius: 10px;
   flex-direction: column;
@@ -109,7 +119,10 @@ body {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
-
+.caht input {
+  flex: 1;
+  padding: 8px;
+}
 .chat-body {
   flex: 1;
   padding: 10px;
