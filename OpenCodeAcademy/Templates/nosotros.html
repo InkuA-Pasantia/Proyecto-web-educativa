@@ -36,18 +36,18 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
-  <body><!-- Navbar Start -->
+  <body>
+    <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
       <nav
         class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
       >
         <a
           href=""
-          class="navbar-brand font-weight-bold text-secondary"
-          style="font-size: 50px"
+          class="navbar-brand font-weight-sans serif text-secondary"
+          style="font-size: 20px"
         >
-          <img src="img/oca.removebg.png" alt="logo">
-          <span class="text-primary">Open Code Academy</span>
+        
         </a>
         <button
           type="button"
@@ -62,194 +62,74 @@
           id="navbarCollapse"
         >
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.html" class="nav-item nav-link active">Inicio</a>
-            <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
-            <a href="cursos.html" class="nav-item nav-link">Cursos</a>
+            <a href="index.html" class="nav-item nav-link">Home</a>
+            <a href="about.html" class="nav-item nav-link active">Nosotros</a>
+            <a href="class.html" class="nav-item nav-link">Classes</a>
+            <a href="team.html" class="nav-item nav-link">Tutores</a>
+            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
             <div class="nav-item dropdown">
               <a
                 href="#"
                 class="nav-link dropdown-toggle"
                 data-toggle="dropdown"
-                >Mis cursos</a
+                ></a
               >
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="C_html.html" class="dropdown-item">HTML5</a>
-                <a href="C_css.html" class="dropdown-item">CSS</a>
+                <a href="blog.html" class="dropdown-item">Blog Grid</a>
+                <a href="single.html" class="dropdown-item">Blog Detail</a>
               </div>
             </div>
-            <a href="contacto.html" class="nav-item nav-link">Contacto</a>
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
           </div>
-          <!-- Formulario Loguin -->
-          <div class="dropdown nav-item nav-link">
-            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Loguin
-            </button>
-            </button> 
-              <!-- Formulario Loguin / Registro -->
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                  <form class="px-4 py-3">
-                    <div class="form-group">
-                      <label for="exampleDropdownFormEmail1">Usuario</label>
-                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
-                    </div>
-                    <div class="form-group">
-                      <label for="exampleDropdownFormPassword1">Contraseña</label>
-                      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
-                    </div>
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                          Recordarme
-                        </label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Loguin ></button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>
-                  <a class="dropdown-item" href="#">¿Sos nuevo aqui? Registrarme</a>                  
-              </div>  
-          </div> 
-          <!-- Rwcuperar: con Javascript se apaga un boton y se enciende el otro-->
-          <div class="dropdown nav-item nav-link">
-            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Recuperar
-            </button> 
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                  <form class="px-4 py-3">
-                    <div class="form-group">
-                      <label for="exampleDropdownFormEmail1">Ingresa tu e-mail</label>
-                      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
-                    </div>            
-                    <button type="submit" class="btn btn-primary">Recuperar ></button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Ya soy usuario</a>
-                  <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>                                    
-              </div>  
-          </div> 
-          <!-- Registro-->
-          <div class="dropdown nav-item nav-link">
-            <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Registro
-            </button> 
-              <!-- Formulario Loguin / Registro  -->
-              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="min-width: 16rem; background-color: #0f6674; color:white">  
-                  <form class="px-4 py-3 needs-validation " novalidate>
-                    <div class="form-row">
-                      <div class="">
-                        <label for="validationCustom01">Nombre</label>
-                        <input type="text" class="form-control" id="validationCustom01" placeholder="tu nombre" required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                      </div>                      
-                      <div class="">
-                        <label for="validationCustom02">Apellido</label>
-                        <input type="text" class="form-control" id="validationCustom02" placeholder="tu apellido" required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                      </div>
-                      <div class="">
-                        <label for="validationCustomUsername">Usuario</label>
-                        <div class="input-group">
-                          <div class="input-group-prepend">
-                            <span class="input-group-text" id="inputGroupPrepend">@</span>
-                          </div>
-                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
-                          <div class="invalid-feedback">
-                            Please choose a username.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="">
-                        <label for="validationEmail">E-mail</label>
-                        <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>
-                        <div class="valid-feedback">
-                          Looks good!
-                        </div>
-                      </div>
-                      <div class="">
-                        <label for="validationCustomPass1">Contraseña</label>
-                        <input type="password" class="form-control" id="validationCustomPass1" placeholder="Contraseña">
-                        <div class="invalid-feedback">
-                          Por favor ingrese su contraseña.
-                        </div>
-                      </div>
-                      <div class="">
-                        <label for="validationCustomPass2">Repetir Contraseña</label>
-                        <input type="password" class="form-control" id="validationCustomPass2" placeholder="Contraseña">
-                        <div class="invalid-feedback">
-                          Por favor ingrese su contraseña.
-                        </div>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <div class="form-check">
-                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                        <label class="form-check-label" for="dropdownCheck">
-                          Recordarme
-                        </label>
-                      </div>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Registrarme ></button>
-                  </form>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" style="color: white; aquamarine" onmouseover="this.style='background-color:aquamarine;';" onmouseout="this.style='background-color:#0f6674; color:white';" href="#">Ya soy usuario</a>                                    
-              </div>  
-          </div>          
-          </div>     
-          </div> 
+          <a href="" class="btn btn-primary px-4">Join Class</a>
+        </div>
       </nav>
     </div>
     <!-- Navbar End -->
 
-    
-    <!-- Header End -->
     <!-- Header Start -->
-    <div class="container-fluid bg-primary mb-5">
-      <div class="row">
-        <div class="col-4 mt-3">
+    <div class="container bg-primary mt-5 mb-5">
+      <h3 class=""display-6">Nosotros</h3>
+      <div class="row mt-4 ">
+        <div class="col-sm-12 col-md-4 col-lg-4 py-3 ">         
         <!---- inicio de card -->
-          <div class="card" style="width: 18rem;">
-            <img src="img/img12.png" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Nuestro Objetivo</h5>
-                <p class="card-text">Desarrollar paginas intuitivas y Profesional</p>
-                <a href="#" class="btn btn-primary">PROFESIONALISMO</a>
-              </div>
-          </div>      
-      </div>        
-      <!--fin de card1-->
-        
-      <div class="col-4 mt-3">
-          <!---- inicio de card -->
-        <div class="card" style="width: 18rem; ">
-          <img class="img-fluid"src="img/img11.png" " alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Nuestra Vision</h5>
-              <p class="card-text">Es una educacion digital sin barreras ni limites</p>
-              <a href="#" class="btn btn-primary">Inclusiva</a>
+            <div class="card" style="width: 18rem;">
+              <img src="img/img2.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Nuestra Objetivo</h5>
+                  <p class="card-text">Desarrollar paginas intuitivas y Profesional</p>
+                  <a href="#" class="btn btn-primary">PROFESIONALISMO</a>
+                </div>
             </div>
+        </div>      
+        <!--fin de card1-->
+          
+        <div class="col-sm-12 col-md-4 col-lg-4 py-3 ">
+                <!---- inicio de card2 -->
+          <div class="card" style="width: 18rem;">
+            <img src="img/img11.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Nuestra Vision</h5>
+                  <p class="card-text">Es una educacion digital sin barreras ni limites</p>
+                  <a href="#" class="btn btn-primary">Diversidad</a>
+              </div>
           </div>
-      </div> <!--fin de card2-->
-        
-      <div class="col-4 mt-3">
-        <!---- inicio de card -->
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="img/img6.png"  alt="...">
-          <div class="card-body">
-            <h5 class="card-title">Integridad</h5>
-            <p class="card-text">Trabajar para vivir </p>
-            <a href="#" class="btn btn-primary">Equidad</a>
-          </div>
+            <!--fin de card2-->
         </div>
-          <!--fin fin de card-->
-      </div>
-    </div>    
-        
+        <div class="col-sm-12 col-md-4 col-lg-4 py-3 ">    
+                <!---- inicio de card -->
+                <div class="card" style="width: 18rem;">
+                  <img src="img/img6.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Integridad</h5>
+                      <p class="card-text">Trabajar para vivir </p>
+                      <a href="#" class="btn btn-primary">DISFRUTAR</a>
+                    </div>
+                </div>
+              </div>  
+        </div>    <!--fin de card-->
+          
+        </div>  
      <section class="row mt-1"> 
       <div
         class="d-flex flex-column align-items-center justify-content-center"
@@ -257,159 +137,154 @@
       >
       <h1 class="row align-center mt-5 mb-5">NUESTRO GRUPO</h1>
         <img
-         class="img-fluid rounded mb-5 mb-lg-0"
+         class="img-fluid rounded mb-5 mb-lg-0 border-radius"
            src="img/grupo1.png"  alt=""/>
-        <h1 class="display-5 font-weight-bold text-white">Somos un equipo pequeño con resultados grandes </h1> <!--aca cambio de h3 por h1-->
+        <h1 class="display-5 font-weight-bold text-white p-3">Somos un equipo pequeño con resultados grandes </h1> <!--aca cambio de h3 por h1-->
         <div class="d-inline-flex text-white">
-          <p class="m-0"><a class="text-white"></a>Siempre buscamos personas adecuadas para que trabajen con nosotros. Si te sientes listo para este reto, te esperamos para que te unas a nosotros a compartir la pasion por la programacion</p>
+          <p class="m-3 text-align-center"><a class="text-white">Siempre buscamos personas adecuadas para que trabajen con   nosotros. Si te sientes listo para este reto, te esperamos para que te unas a nosotros a compartir la pasion por la programacion</a></p>
         </div>
       </div>
     
+    <!-- Header End -->
 
-    <!-- About Start -->
     
-    <!-- Team Start -->
-    <!-- Team End -->
-
     <!-- Footer Start -->
-     <!-- Footer Start -->
-     <div
-     class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5"
-   >
-     <div class="row pt-5">
-       <div class="col-lg-3 col-md-6 mb-5">
-         <a
-           href=""
-           class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
-           style="font-size: 40px; line-height: 40px"
-         >
-         <img src="img/oca.removebg.png" alt="logo">
-           <span class="text-white">O.C.A</span>
-         </a>
-         <p>
-           Open Code Academy es una organización de desarrollo de software con sede en Argentina
-           formada por estudiantes graduados de la carrera de Programación
-           de la UTN San Rafael Mendoza.
-         </p>
+    <div
+      class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5"
+    >
+      <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+          <a
+            href=""
+            class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+            style="font-size: 40px; line-height: 40px"
+          >        
+            <span class="text-primary mb-4">Academia</span>
+          </a>
          <div class="d-flex justify-content-start mt-4">
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-twitter"></i
-           ></a>
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-facebook-f"></i
-           ></a>
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-linkedin-in"></i
-           ></a>
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-instagram"></i
-           ></a>
-         </div>
-       </div>
-       <div class="col-lg-3 col-md-6 mb-5">
-         <h3 class="text-primary mb-4">Contáctanos</h3>
-         <div class="d-flex">
-           <h4 class="fa fa-map-marker-alt text-primary"></h4>
-           <div class="pl-3">
-             <h5 class="text-white">Dirección</h5>
-             <p>La Madrid 127, Bs. As., Argentina</p>
-           </div>
-         </div>
-         <div class="d-flex">
-           <h4 class="fa fa-envelope text-primary"></h4>
-           <div class="pl-3">
-             <h5 class="text-white">Email</h5>
-             <p>oca@gmail.com</p>
-           </div>
-         </div>
-         <div class="d-flex">
-           <h4 class="fa fa-phone-alt text-primary"></h4>
-           <div class="pl-3">
-             <h5 class="text-white">Tel.</h5>
-             <p>+055 11 5849 1127</p>
-           </div>
-         </div>
-       </div>
-       <div class="col-lg-3 col-md-6 mb-5">
-         <h3 class="text-primary mb-4">Enlaces rápidos</h3>
-         <div class="d-flex flex-column justify-content-start">
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Inicio</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Nosotros</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Cursos</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Mis Cursos</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Contacto</a
-           
-           >
-         </div>
-       </div>
-       <div class="col-lg-3 col-md-6 mb-5">
-         <h3 class="text-primary mb-4">Boletín Informativo</h3>
-         <form action="">
-           <div class="form-group">
-             <input
-               type="text"
-               class="form-control border-0 py-4"
-               placeholder="Su nombre"
-               required="required"
-             />
-           </div>
-           <div class="form-group">
-             <input
-               type="email"
-               class="form-control border-0 py-4"
-               placeholder="Su Email"
-               required="required"
-             />
-           </div>
-           <div>
-             <button
-               class="btn btn-primary btn-block border-0 py-3"
-               type="submit"
-             >
-               Enviar
-             </button>
-           </div>
-         </form>
-       </div>
-     </div>
-     <div
-       class="container-fluid pt-5"
-       style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
-     >
-       <p class="m-0 text-center text-white">
-         &copy;
-         <a class="text-primary font-weight-bold" href="#">www.oca.com</a>.
-         Todos los derechos reservados.
+            <a
+              class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+              style="width: 38px; height: 38px"
+              href="#"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+              style="width: 38px; height: 38px"
+              href="#"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+              style="width: 38px; height: 38px"
+              href="#"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a
+              class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+              style="width: 38px; height: 38px"
+              href="#"
+              ><i class="fab fa-instagram"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h3 class="text-primary mb-4">Contactanos</h3>
+          <div class="d-flex">
+            <h4 class="fa fa-map-marker-alt text-primary"></h4>
+            <div class="pl-3">
+              <h5 class="text-white">Direccion</h5>                            
+              <p>Madrid 123 Pinamar Buenos Aires, Argentina</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <h4 class="fa fa-envelope text-primary"></h4>
+            <div class="pl-3">
+              <h5 class="text-white">Email</h5>
+              <p>goc.devs.co@gmail.com</p>
+            </div>
+          </div>
+          <div class="d-flex">
+            <h4 class="fa fa-phone-alt text-primary"></h4>
+            <div class="pl-3">
+              <h5 class="text-white">Telefono</h5>
+              <p>+54 345 4267890</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h3 class="text-primary mb-4">Quick Links</h3>
+          <div class="d-flex flex-column justify-content-start">
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Home</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>About Us</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Our Classes</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Our Teachers</a
+            >
+            <a class="text-white mb-2" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Our Blog</a
+            >
+            <a class="text-white" href="#"
+              ><i class="fa fa-angle-right mr-2"></i>Contact Us</a
+            >
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+          <h3 class="text-primary mb-4">Por una Consulta</h3>
+          <form action="">
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control border-0 py-4"
+                placeholder="Your Name"
+                required="required"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control border-0 py-4"
+                placeholder="Your Email"
+                required="required"
+              />
+            </div>
+            <div>
+              <button
+                class="btn btn-primary btn-block border-0 py-3"
+                type="submit"
+              >
+                Registrate
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div
+        class="container-fluid pt-5"
+        style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
+      >
+        <p class="m-0 text-center text-white">
+          &copy;
+          <a class="text-primary font-weight-bold" href="#">Your Site Name</a>.
+          All Rights Reserved.
 
-         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-        
-         <br />Developed By:
-         <a href="https://www.goc.com" target="_blank">Guardians of Codes</a>
-       </p>
-     </div>
-   </div>
-   <!-- Footer End -->
+          <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+          Designed by
+          <a class="text-primary font-weight-bold" href="https://htmlcodex.com"
+            >Guardians of Codes</a
+          >
+          <br/>Distribuido Por:
+          <a href="https://themewagon.com" target="_blank">GOC</a>
+        </p>
+      </div>
+    </div>
+    <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary p-3 back-to-top"
