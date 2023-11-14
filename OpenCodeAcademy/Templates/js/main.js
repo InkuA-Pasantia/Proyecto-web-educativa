@@ -139,6 +139,49 @@
             }
         });
     });
+
+    // Star - Bot chat
+    $(document).ready(function () {
+        // Array para almacenar mensajes
+        var messages = [];
+    
+        // Función para enviar un mensaje del usuario
+        window.sendMessage = function () {
+            var userInput = $('#userInput').val();
+            if (userInput.trim() !== '') {
+                // Agregar mensaje del usuario al array
+                messages.push({ user: true, text: userInput });
+    
+                // Actualizar la interfaz del chat
+                updateChat();
+    
+                // Lógica del chatbot (puedes personalizar esto según tus necesidades)
+                var botResponse = '¡Hola! Soy tu chatbot Robotin. Gracias por tu mensaje.';
+                messages.push({ user: false, text: botResponse });
+    
+                // Limpiar el campo de entrada del usuario
+                $('#userInput').val('');
+    
+                // Actualizar la interfaz del chat después de la respuesta del chatbot
+                updateChat();
+            }
+        };
+    
+        // Función para actualizar la interfaz del chat
+        function updateChat() {
+            var chatBody = $('#chatBody');
+            chatBody.empty();
+    
+            messages.forEach(function (message) {
+                var className = message.user ? 'user-message' : 'bot-message';
+                chatBody.append('<div class="' + className + '">' + message.text + '</div>');
+            });
+    
+            // Desplazar hacia abajo para mostrar el último mensaje
+            chatBody.scrollTop(chatBody[0].scrollHeight);
+        }
+    });
+    // End - Bot chat
     
 })(jQuery);
 
