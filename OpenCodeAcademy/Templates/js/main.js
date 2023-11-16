@@ -141,44 +141,37 @@
     });
 
     // Star - Bot chat
-    $(document).ready(function () {
-        // Array para almacenar mensajes
-        var messages = [];
+    document.addEventListener("DOMContentLoaded", function() {
+        var sendButton = document.getElementById("send-btn");
+        var userInput = document.getElementById("user-input");
+        var chatBody = document.querySelector(".chat-body");
     
-        // Función para enviar un mensaje del usuario
-        window.sendMessage = function () {
-            var userInput = $('#userInput').val();
-            if (userInput.trim() !== '') {
-                // Agregar mensaje del usuario al array
-                messages.push({ user: true, text: userInput });
+        sendButton.addEventListener("click", function() {
+            sendMessage();
+        });
     
-                // Actualizar la interfaz del chat
-                updateChat();
-    
-                // Lógica del chatbot (puedes personalizar esto según tus necesidades)
-                var botResponse = '¡Hola! Soy tu chatbot Robotin. Gracias por tu mensaje.';
-                messages.push({ user: false, text: botResponse });
-    
-                // Limpiar el campo de entrada del usuario
-                $('#userInput').val('');
-    
-                // Actualizar la interfaz del chat después de la respuesta del chatbot
-                updateChat();
+        userInput.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                sendMessage();
             }
-        };
+        });
     
-        // Función para actualizar la interfaz del chat
-        function updateChat() {
-            var chatBody = $('#chatBody');
-            chatBody.empty();
+        function sendMessage() {
+            var userMessage = userInput.value;
+            if (userMessage.trim() === "") {
+                return; // No enviar mensajes vacíos
+            }
     
-            messages.forEach(function (message) {
-                var className = message.user ? 'user-message' : 'bot-message';
-                chatBody.append('<div class="' + className + '">' + message.text + '</div>');
-            });
+            // Agregar el mensaje del usuario al chat body
+            chatBody.innerHTML += '<div class="user-message">' + userMessage + '</div>';
     
-            // Desplazar hacia abajo para mostrar el último mensaje
-            chatBody.scrollTop(chatBody[0].scrollHeight);
+            // Lógica del bot: procesar el mensaje y obtener la respuesta
+    
+            // Agregar la respuesta del bot al chat body
+            chatBody.innerHTML += '<div class="bot-message">' + 'Respuesta del bot...' + '</div>';
+    
+            // Limpiar el input de usuario después de enviar el mensaje
+            userInput.value = "";
         }
     });
     // End - Bot chat
