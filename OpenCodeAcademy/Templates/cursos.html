@@ -37,16 +37,14 @@
   <body>
     <!-- Navbar Start -->
     <div class="container-fluid bg-light position-relative shadow">
-      <nav
-        class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
-      >
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
         <a
           href=""
           class="navbar-brand font-weight-bold text-secondary"
           style="font-size: 50px"
         >
-          <i class="flaticon-043-teddy-bear"></i>
-          <span class="text-primary">KidKinder</span>
+          <img src="img/oca.removebg.png" alt="logo">
+          <span class="text-primary">Open Code Academy</span>
         </a>
         <button
           type="button"
@@ -56,32 +54,188 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div
-          class="collapse navbar-collapse justify-content-between"
-          id="navbarCollapse"
-        >
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav font-weight-bold mx-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="about.html" class="nav-item nav-link">About</a>
-            <a href="class.html" class="nav-item nav-link active">Classes</a>
-            <a href="team.html" class="nav-item nav-link">Teachers</a>
-            <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+            <a href="index.html" class="nav-item nav-link active">Inicio</a>
+            <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
+            <a href="cursos.html" class="nav-item nav-link">Cursos</a>
             <div class="nav-item dropdown">
-              <a
-                href="#"
-                class="nav-link dropdown-toggle"
-                data-toggle="dropdown"
-                >Pages</a
-              >
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mis cursos</a>
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                <a href="single.html" class="dropdown-item">Blog Detail</a>
+                <a href="C_css.html" class="dropdown-item">HTML5</a>
+                <a href="C_css.html" class="dropdown-item">CSS</a>
               </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
-          </div>
-          <a href="" class="btn btn-primary px-4">Join Class</a>
-        </div>
+            <a href="contacto.html" class="nav-item nav-link">Contacto</a>
+          </div> 
+            <!-- modal -->             
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login" data-whatever="@mdo">Log-in</button>
+
+            <!-- Log in-->
+            <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Loguin</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="px-4 py-3 needs-validation">
+                      <div class="form-group">
+                        <div class="box-imp">
+                          <label for="validationCustomUsername">Usuario</label>
+                          <input type="text" class="form-control" id="validationCustomUsername" placeholder="tu usuario" required>                          
+                        </div>                          
+                      </div>
+                      <div class="form-group">
+                        <div class="box-imp">
+                          <label for="validationCustomPass1">Contraseña</label>
+                          <input type="password" class="form-control" id="validationCustomPass1" placeholder="tu contraseña" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                          <label class="form-check-label" for="dropdownCheck">
+                            Recordarme
+                          </label>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Loguin ></button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#recuperar">¿ Olvidste tu contraseña ?</button>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#registro">¿ Sos nuevo aqui ? Registrarme</button>                    
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Recuperar-->
+            <div class="modal fade" id="recuperar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Recuperar Contraseña</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form class="px-4 py-3 needs-validation">
+                      <div class="form-group">
+                        <div class="box-imp">
+                          <label for="validationEmail">Ingrese su E-mail, por favor!</label>
+                          <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>                          
+                        </div>                        
+                      </div>            
+                      <button type="submit" class="btn btn-primary">Recuperar ></button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#login">Ya soy usuario</button>
+                    <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#registro">¿ Sos nuevo aqui ? Registrarme</button> 
+                  </div>                  
+                </div>
+              </div>
+            </div>
+
+            <!-- Registrar-->
+            <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body form-registro">
+                    <form class="px-4 py-3 needs-validation " novalidate>
+                      <div class="form-row">
+                        <div class="box-imp">
+                          <label for="validationCustom01">Nombre</label>
+                          <input type="text" class="form-control" id="validationCustom01" placeholder="tu nombre" required>
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Ingrese su Nombre, por favor!
+                          </div>
+                        </div>                      
+                        <div class="box-imp">
+                          <label for="validationCustom02">Apellido</label>
+                          <input type="text" class="form-control" id="validationCustom02" placeholder="tu apellido" required>
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Ingrese su Apellido, por favor!
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationCustomUsername">Usuario</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            </div>
+                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
+                            <div class="valid-feedback">
+                              Correcto!
+                            </div>
+                            <div class="invalid-feedback">
+                              Ingrese su Usuario, por favor!
+                            </div>
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationEmail">E-mail</label>
+                          <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Ingrese su E-mail, por favor!
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationCustomPass1">Contraseña</label>
+                          <input type="password" class="form-control" id="validationCustomPass1" placeholder="Contraseña">
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Ingrese su Contraseña, por favor!
+                          </div>
+                        </div>
+                        <div class="box-imp">
+                          <label for="validationCustomPass2">Repetir Contraseña</label>
+                          <input type="password" class="form-control" id="validationCustomPass2" placeholder="Contraseña">
+                          <div class="valid-feedback">
+                            Correcto!
+                          </div>
+                          <div class="invalid-feedback">
+                            Reingrese su Contraseña, por favor!
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="form-check">
+                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                          <label class="form-check-label" for="dropdownCheck">
+                            Recordarme
+                          </label>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Registrarme ></button>
+                    </form>
+                    <div class="dropdown-divider"></div>
+                    <button type="button" class="btn btn-secondary vuelve" data-dismiss="modal" data-toggle="modal" data-target="#login"> < Ya soy usuario</button>
+                  </div>                  
+                </div>
+              </div>
+            </div>     
       </nav>
     </div>
     <!-- Navbar End -->
