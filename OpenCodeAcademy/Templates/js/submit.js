@@ -13,14 +13,12 @@
         if (!form.checkValidity()) {
           event.preventDefault()
           event.stopPropagation()
-        }
-        if (pass1.value != pass2.value){
-            event.preventDefault()
+          if (pass1.value != pass2.value){
             event.stopPropagation()
-            console.log('son distintos'); 
+            alert('son distintos'); 
+          }
         }
-         
-
+  
         form.classList.add('was-validated')
       }, false)
     })
