@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>KidKinder - Kindergarten Website Template</title>
+    <title>OCA - HTML</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -32,178 +32,216 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/Navbar.css" rel="stylesheet" />
+    
   </head>
 
   <body>
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-light position-relative shadow">
-        <nav
-          class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5"
-        >
-          <a
-            href=""
-            class="navbar-brand font-weight-bold text-secondary"
-            style="font-size: 50px"
-          >
-            <img src="img/oca.removebg.png" alt="logo">
-            <span class="text-primary">Open Code Academy</span>
-          </a>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-toggle="collapse"
-            data-target="#navbarCollapse"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div
-            class="collapse navbar-collapse justify-content-between"
-            id="navbarCollapse"
-          >
-            <div class="navbar-nav font-weight-bold mx-auto py-0">
-              <a href="index.html" class="nav-item nav-link active">Inicio</a>
-              <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
-              <a href="cursos.html" class="nav-item nav-link">Cursos</a>
-              <div class="nav-item dropdown">
-                <a
-                  href="#"
-                  class="nav-link dropdown-toggle"
-                  data-toggle="dropdown"
-                  >Mis cursos</a
-                >
-                <div class="dropdown-menu rounded-0 m-0">
-                  <a href="C_html.html" class="dropdown-item">HTML5</a>
-                  <a href="C_css.html" class="dropdown-item">CSS</a>
-                </div>
-              </div>
-              <a href="contacto.html" class="nav-item nav-link">Contacto</a>
+   <!-- Navbar Start -->
+   <div class="container-fluid bg-light position-relative shadow">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a
+        href=""
+        class="navbar-brand font-weight-bold text-secondary"
+        style="font-size: 50px"
+      >
+        <img src="img/oca.removebg.png" alt="logo">
+        <span class="text-primary">Open Code Academy</span>
+      </a>
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+        <div class="navbar-nav font-weight-bold mx-auto py-0">
+          <a href="index.html" class="nav-item nav-link active">Inicio</a>
+          <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
+          <a href="cursos.html" class="nav-item nav-link">Cursos</a>
+          <div class="nav-item dropdown">
+            <a href="misCursos.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Mis cursos</a>
+            <div class="dropdown-menu rounded-0 m-0">
+              <a href="misCursos.html" class="dropdown-item">- TODOS -</a>
+              <a href="C_html.html" class="dropdown-item">Html5</a>
+              <a href="C_css.html" class="dropdown-item">Css</a>
             </div>
-            <!-- Formulario Loguin -->
-            <div class="dropdown nav-item nav-link">
-              <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Loguin
-              </button>
-              </button> 
-                <!-- Formulario Loguin / Registro -->
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                    <form class="px-4 py-3">
-                      <div class="form-group">
-                        <label for="exampleDropdownFormEmail1">Usuario</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
+          </div>
+          <a href="contacto.html" class="nav-item nav-link">Contacto</a>
+        </div> 
+          <!-- modal -->             
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login" data-whatever="@mdo">Log-in</button>
+
+          <!-- Log in-->
+          <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Loguin</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="logger.js" class="px-4 py-3 needs-validation">
+                    <div class="form-group">
+                      <div class="box-imp">
+                        <label for="validationCustomUsername">Usuario</label>
+                        <input type="text" class="form-control" id="validationCustomUsername" placeholder="tu usuario" required>                          
+                      </div>                          
+                    </div>
+                    <div class="form-group">
+                      <div class="box-imp">
+                        <label for="validationCustomPass1">Contraseña</label>
+                        <input type="password" class="form-control" id="validationCustomPass1" placeholder="tu contraseña" required>
                       </div>
-                      <div class="form-group">
-                        <label for="exampleDropdownFormPassword1">Contraseña</label>
-                        <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Contraseña">
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          Recordarme
+                        </label>
                       </div>
-                      <div class="form-group">
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                          <label class="form-check-label" for="dropdownCheck">
-                            Recordarme
-                          </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Loguin ></button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#recuperar">¿ Olvidste tu contraseña ?</button>
+                  <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#registro">¿ Sos nuevo aqui ? Registrarme</button>                    
+                </div>                  
+              </div>
+            </div>
+          </div>
+
+          <!-- Recuperar-->
+          <div class="modal fade" id="recuperar" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Recuperar Contraseña</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <form action="recuperar.js" class="px-4 py-3 needs-validation">
+                    <div class="form-group">
+                      <div class="box-imp">
+                        <label for="validationEmail">Ingrese su E-mail, por favor!</label>
+                        <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>                          
+                      </div>                        
+                    </div>            
+                    <button type="submit" class="btn btn-primary">Recuperar ></button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#login">Ya soy usuario</button>
+                  <button type="button" class="btn btn-outline-info" data-dismiss="modal" data-toggle="modal" data-target="#registro">¿ Sos nuevo aqui ? Registrarme</button> 
+                </div>                  
+              </div>
+            </div>
+          </div>
+
+          <!-- Registrar-->
+          <div class="modal fade" id="registro" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Registrar</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body form-registro">
+                  <form action="registrar.js" ="px-4 py-3 needs-validation " novalidate>
+                    <div class="form-row">
+                      <div class="box-imp">
+                        <label for="validationCustom01">Nombre</label>
+                        <input type="text" class="form-control" id="validationCustom01" placeholder="tu nombre" required>
+                        <div class="valid-feedback">
+                          Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                          Ingrese su Nombre, por favor!
+                        </div>
+                      </div>                      
+                      <div class="box-imp">
+                        <label for="validationCustom02">Apellido</label>
+                        <input type="text" class="form-control" id="validationCustom02" placeholder="tu apellido" required>
+                        <div class="valid-feedback">
+                          Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                          Ingrese su Apellido, por favor!
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-primary">Loguin ></button>
-                    </form>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>
-                    <a class="dropdown-item" href="#">¿Sos nuevo aqui? Registrarme</a>                  
-                </div>  
-            </div> 
-            <!-- Rwcuperar: con Javascript se apaga un boton y se enciende el otro-->
-            <div class="dropdown nav-item nav-link">
-              <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Recuperar
-              </button> 
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">  
-                    <form class="px-4 py-3">
-                      <div class="form-group">
-                        <label for="exampleDropdownFormEmail1">Ingresa tu e-mail</label>
-                        <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="Usuario o Email">
-                      </div>            
-                      <button type="submit" class="btn btn-primary">Recuperar ></button>
-                    </form>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Ya soy usuario</a>
-                    <a class="dropdown-item" href="#">Olvidaste tu contraseña?</a>                                    
-                </div>  
-            </div> 
-            <!-- Registro-->
-            <div class="dropdown nav-item nav-link">
-              <button class="btn btn-primary px-4 " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Registro
-              </button> 
-                <!-- Formulario Loguin / Registro  -->
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton" style="min-width: 16rem; background-color: #0f6674; color:white">  
-                    <form class="px-4 py-3 needs-validation " novalidate>
-                      <div class="form-row">
-                        <div class="">
-                          <label for="validationCustom01">Nombre</label>
-                          <input type="text" class="form-control" id="validationCustom01" placeholder="tu nombre" required>
+                      <div class="box-imp">
+                        <label for="validationCustomUsername">Usuario</label>
+                        <div class="input-group">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                          </div>
+                          <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
                           <div class="valid-feedback">
-                            Looks good!
+                            Correcto!
                           </div>
-                        </div>                      
-                        <div class="">
-                          <label for="validationCustom02">Apellido</label>
-                          <input type="text" class="form-control" id="validationCustom02" placeholder="tu apellido" required>
-                          <div class="valid-feedback">
-                            Looks good!
-                          </div>
-                        </div>
-                        <div class="">
-                          <label for="validationCustomUsername">Usuario</label>
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text" id="inputGroupPrepend">@</span>
-                            </div>
-                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
-                            <div class="invalid-feedback">
-                              Please choose a username.
-                            </div>
-                          </div>
-                        </div>
-                        <div class="">
-                          <label for="validationEmail">E-mail</label>
-                          <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>
-                          <div class="valid-feedback">
-                            Looks good!
-                          </div>
-                        </div>
-                        <div class="">
-                          <label for="validationCustomPass1">Contraseña</label>
-                          <input type="password" class="form-control" id="validationCustomPass1" placeholder="Contraseña">
                           <div class="invalid-feedback">
-                            Por favor ingrese su contraseña.
-                          </div>
-                        </div>
-                        <div class="">
-                          <label for="validationCustomPass2">Repetir Contraseña</label>
-                          <input type="password" class="form-control" id="validationCustomPass2" placeholder="Contraseña">
-                          <div class="invalid-feedback">
-                            Por favor ingrese su contraseña.
+                            Ingrese su Usuario, por favor!
                           </div>
                         </div>
                       </div>
-                      <div class="form-group">
-                        <div class="form-check">
-                          <input type="checkbox" class="form-check-input" id="dropdownCheck">
-                          <label class="form-check-label" for="dropdownCheck">
-                            Recordarme
-                          </label>
+                      <div class="box-imp">
+                        <label for="validationEmail">E-mail</label>
+                        <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>
+                        <div class="valid-feedback">
+                          Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                          Ingrese su E-mail, por favor!
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-primary">Registrarme ></button>
-                    </form>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" style="color: white; aquamarine" onmouseover="this.style='background-color:aquamarine;';" onmouseout="this.style='background-color:#0f6674; color:white';" href="#">Ya soy usuario</a>                                    
-                </div>  
-            </div>          
-            </div>     
-            </div> 
-        </nav>
-      </div>
-      <!-- Navbar End -->
+                      <div class="box-imp">
+                        <label for="validationCustomPass1">Contraseña</label>
+                        <input type="password" class="form-control" id="validationCustomPass1" placeholder="Contraseña">
+                        <div class="valid-feedback">
+                          Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                          Ingrese su Contraseña, por favor!
+                        </div>
+                      </div>
+                      <div class="box-imp">
+                        <label for="validationCustomPass2">Repetir Contraseña</label>
+                        <input type="password" class="form-control" id="validationCustomPass2" placeholder="Contraseña">
+                        <div class="valid-feedback">
+                          Correcto!
+                        </div>
+                        <div class="invalid-feedback">
+                          Reingrese su Contraseña, por favor!
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                        <label class="form-check-label" for="dropdownCheck">
+                          Recordarme
+                        </label>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Registrarme ></button>
+                  </form>
+                  <div class="dropdown-divider"></div>
+                  <button type="button" class="btn btn-secondary vuelve" data-dismiss="modal" data-toggle="modal" data-target="#login"> < Ya soy usuario</button>
+                </div>                  
+              </div>
+            </div>
+          </div>     
+    </nav>
+  </div>
+  <!-- Navbar End -->
 
     <!-- Header Start -->
     <div class="container-fluid bg-primary mb-5">
@@ -422,143 +460,142 @@
     <!-- Blog End -->
 
      <!-- Footer Start -->
-     <div
-     class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5"
-   >
-     <div class="row pt-5">
-       <div class="col-lg-3 col-md-6 mb-5">
-         <a
-           href=""
-           class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
-           style="font-size: 40px; line-height: 40px"
-         >
-         <img src="img/oca.removebg.png" alt="logo">
-           <span class="text-white">O.C.A</span>
-         </a>
-         <p>
-           Open Code Academy es una organización de desarrollo de software con sede en Argentina
-           formada por estudiantes graduados de la carrera de Programación
-           de la UTN San Rafael Mendoza.
-         </p>
-         <div class="d-flex justify-content-start mt-4">
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-twitter"></i
-           ></a>
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-facebook-f"></i
-           ></a>
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-linkedin-in"></i
-           ></a>
-           <a
-             class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
-             style="width: 38px; height: 38px"
-             href="#"
-             ><i class="fab fa-instagram"></i
-           ></a>
-         </div>
-       </div>
-       <div class="col-lg-3 col-md-6 mb-5">
-         <h3 class="text-primary mb-4">Contáctanos</h3>
-         <div class="d-flex">
-           <h4 class="fa fa-map-marker-alt text-primary"></h4>
-           <div class="pl-3">
-             <h5 class="text-white">Dirección</h5>
-             <p>La Madrid 127, Bs. As., Argentina</p>
-           </div>
-         </div>
-         <div class="d-flex">
-           <h4 class="fa fa-envelope text-primary"></h4>
-           <div class="pl-3">
-             <h5 class="text-white">Email</h5>
-             <p>oca@gmail.com</p>
-           </div>
-         </div>
-         <div class="d-flex">
-           <h4 class="fa fa-phone-alt text-primary"></h4>
-           <div class="pl-3">
-             <h5 class="text-white">Tel.</h5>
-             <p>+055 11 5849 1127</p>
-           </div>
-         </div>
-       </div>
-       <div class="col-lg-3 col-md-6 mb-5">
-         <h3 class="text-primary mb-4">Enlaces rápidos</h3>
-         <div class="d-flex flex-column justify-content-start">
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Inicio</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Nosotros</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Cursos</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Mis Cursos</a
-           >
-           <a class="text-white mb-2" href="#"
-             ><i class="fa fa-angle-right mr-2"></i>Contacto</a
-           
-           >
-         </div>
-       </div>
-       <div class="col-lg-3 col-md-6 mb-5">
-         <h3 class="text-primary mb-4">Boletín Informativo</h3>
-         <form action="">
-           <div class="form-group">
-             <input
-               type="text"
-               class="form-control border-0 py-4"
-               placeholder="Su nombre"
-               required="required"
-             />
-           </div>
-           <div class="form-group">
-             <input
-               type="email"
-               class="form-control border-0 py-4"
-               placeholder="Su Email"
-               required="required"
-             />
-           </div>
-           <div>
-             <button
-               class="btn btn-primary btn-block border-0 py-3"
-               type="submit"
-             >
-               Enviar
-             </button>
-           </div>
-         </form>
-       </div>
-     </div>
-     <div
-       class="container-fluid pt-5"
-       style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
-     >
-       <p class="m-0 text-center text-white">
-         &copy;
-         <a class="text-primary font-weight-bold" href="#">www.oca.com</a>.
-         Todos los derechos reservados.
+    <div
+    class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5"
+  >
+    <div class="row pt-5">
+      <div class="col-lg-3 col-md-6 mb-5">
+        <a
+          href=""
+          class="navbar-brand font-weight-bold text-primary m-0 mb-4 p-0"
+          style="font-size: 40px; line-height: 40px"
+        >
+        <img src="img/oca.removebg.png" alt="logo">
+          <span class="text-white">O.C.A</span>
+        </a>
+        <p>
+          Open Code Academy es una organización de desarrollo de software con sede en Argentina
+          formada por estudiantes graduados de la carrera de Programación
+          de la UTN San Rafael Mendoza.
+        </p>
+        <div class="d-flex justify-content-start mt-4">
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a
+            class="btn btn-outline-primary rounded-circle text-center mr-2 px-0"
+            style="width: 38px; height: 38px"
+            href="#"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Contáctanos</h3>
+        <div class="d-flex">
+          <h4 class="fa fa-map-marker-alt text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Dirección</h5>
+            <p>La Madrid 127, Bs. As., Argentina</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <h4 class="fa fa-envelope text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Email</h5>
+            <p>oca@gmail.com</p>
+          </div>
+        </div>
+        <div class="d-flex">
+          <h4 class="fa fa-phone-alt text-primary"></h4>
+          <div class="pl-3">
+            <h5 class="text-white">Tel.</h5>
+            <p>+055 11 5849 1127</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Enlaces rápidos</h3>
+        <div class="d-flex flex-column justify-content-start">
+          <a class="text-white mb-2" href="index.html"
+            ><i class="fa fa-angle-right mr-2"></i>Inicio</a
+          >
+          <a class="text-white mb-2" href="nosotros.html"
+            ><i class="fa fa-angle-right mr-2"></i>Nosotros</a
+          >
+          <a class="text-white mb-2" href="cursos.html"
+            ><i class="fa fa-angle-right mr-2"></i>Cursos</a
+          >
+          <a class="text-white mb-2" href="misCursos.html"
+            ><i class="fa fa-angle-right mr-2"></i>Mis Cursos</a
+          >
+          <a class="text-white mb-2" href="contacto.html"
+            ><i class="fa fa-angle-right mr-2"></i>Contacto</a            
+          >
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-5">
+        <h3 class="text-primary mb-4">Boletín Informativo</h3>
+        <form action="">
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control border-0 py-4"
+              placeholder="Su nombre"
+              required="required"
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="email"
+              class="form-control border-0 py-4"
+              placeholder="Su Email"
+              required="required"
+            />
+          </div>
+          <div>
+            <button
+              class="btn btn-primary btn-block border-0 py-3"
+              type="submit"
+            >
+              Enviar
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div
+      class="container-fluid pt-5"
+      style="border-top: 1px solid rgba(23, 162, 184, 0.2) ;"
+    >
+      <p class="m-0 text-center text-white">
+        &copy;
+        <a class="text-primary font-weight-bold" href="#">www.oca.com</a>.
+        Todos los derechos reservados.
 
-         <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-        
-         <br />Developed By:
-         <a href="https://www.goc.com" target="_blank">Guardians of Codes</a>
-       </p>
-     </div>
-   </div>
-   <!-- Footer End -->
+        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+       
+        <br />Developed By:
+        <a href="https://www.goc.com" target="_blank">Guardians of Codes</a>
+      </p>
+    </div>
+  </div>
+  <!-- Footer End -->
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-primary p-3 back-to-top"
