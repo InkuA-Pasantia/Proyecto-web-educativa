@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>OCA</title>
+    <title>OCA - Inicio</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -59,8 +59,6 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav font-weight-bold mx-auto py-0">
             <a href="index.html" class="nav-item nav-link active">Inicio</a>
-            <a href="about.html" class="nav-item nav-link">Nosotros</a>
-            <a href="class.html" class="nav-item nav-link">Cursos</a>
             <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
             <a href="cursos.html" class="nav-item nav-link">Cursos</a>
             <div class="nav-item dropdown">
@@ -70,7 +68,7 @@
                 <a href="C_css.html" class="dropdown-item">CSS</a>
               </div>
             </div>
-            <a href="contact.html" class="nav-item nav-link">Contacto</a>
+            <a href="contacto.html" class="nav-item nav-link">Contacto</a>
           </div> 
             <!-- modal -->             
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#login" data-whatever="@mdo">Log-in</button>
@@ -243,6 +241,28 @@
       </nav>
     </div>
     <!-- Navbar End -->
+     <!-- Contenedor del chat bot flotante -->
+     <div class="chat-container">
+      <div class="chat-icon">
+          <a href="../IA_Chat_Bot/robotino.html">
+              <img src="img/boot_Shad_400 (1).png" alt="Chat Bot">
+          </a>
+      </div>
+      <div class="chat-box">
+          <div class="chat-header">
+              Robo Tino
+              <span class="close-btn">&times;</span>
+          </div>
+          <div class="chat-body">
+              <!-- Aquí se mostrarán los mensajes del chat -->
+          </div>
+          <div class="chat-footer">
+              <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
+              <button id="send-btn">Enviar</button>
+          </div>
+      </div>
+  </div>
+  <!-- FIN Contenedor del chat bot flotante -->  
 
     <!-- Header Start -->
     <div class="container-fluid bg-primary px-0 px-md-5 mb-5">
@@ -264,26 +284,7 @@
     </div>
     <!-- Header End -->
 
-    <!-- Contenedor del chat bot flotante -->
-    <div class="chat-container">
-      <div class="chat-icon">
-          <img src="img/bot.jpg" alt="Chat Icon">
-      </div>
-      <div class="chat-box">
-          <div class="chat-header">
-              Robo Tino
-              <span class="close-btn">&times;</span>
-          </div>
-          <div class="chat-body">
-              <!-- Aquí se mostrarán los mensajes del chat -->
-          </div>
-          <div class="chat-footer">
-              <input type="text" id="user-input" placeholder="Escribe tu mensaje...">
-              <button id="send-btn">Enviar</button>
-          </div>
-      </div>
-    </div>  
-  <!-- FIN Contenedor del chat bot flotante -->  
+   
 
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -466,7 +467,82 @@
     </div>
     <!-- Class End -->
 
-   S
+    <!-- Star Comunidad -->
+    <div class="container">        
+        
+      <div class="row container">
+          
+          <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+              <div class="goodnesssec buttermilk smbg">
+                  <a href="{% url 'category' 'MJ' %}">
+                      <div class="goodnesssec text-center">
+                          <img src="{% static 'app/img/productosNS/colita.png' %}" class="img-responsive center-block img-fluid" alt="">
+                          <p class="mlkpro">Colita de cuadril</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+          
+          <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+              <div class="goodnesssec buttermilk buttermilk">
+                  <a href="{% url 'category' 'MJ' %}">
+                      <div class="goodnesssec text-center">
+                          <img src="{% static 'app/img/productosNS/albondigas.png' %}" class="img-responsive center-block img-fluid" alt="">
+                          <p class="mlkpro">Albondigas con arroz</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+         
+          <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+              <div class="goodnesssec buttermilk curdbgpro">
+                  <a href="{% url 'category' 'MJ' %}">
+                      <div class="goodnesssec text-center">
+                          <img src="{% static 'app/img/productosNS/bondiola.png' %}" class="img-responsive center-block img-fluid" alt="">
+                          <p class="mlkpro">Bondiola mechada</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+
+      
+    
+      <div class="row container">
+          
+          <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+              <div class="goodnesssec buttermilk smbg">
+                  <a href="{% url 'category' 'HM' %}">
+                      <div class="goodnesssec text-center">
+                          <img src="{% img/detail.jpg %}" class="img-responsive center-block img-fluid" alt="">
+                          <p class="mlkpro">Unite a nuestra comunidad</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+         
+          <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+              <div class="goodnesssec buttermilk buttermilk">
+                  <a href="{% url 'category' 'HM' %}">
+                      <div class="goodnesssec text-center">
+                          <img src="{%img/about-2.jpg %}" class="img-responsive center-block img-fluid" alt="">
+                          <p class="mlkpro">Juntos nos ayudamos</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+       
+          <div class="col-sm-4 col-md-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none">
+              <div class="goodnesssec buttermilk curdbgpro">
+                  <a href="{% url 'category' 'ZA' %}">
+                      <div class="goodnesssec text-center">
+                          <img src="{%img/Prg.todos.jpeg %}" class="img-responsive center-block img-fluid" alt="">
+                          <p class="mlkpro">Vos podes!</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+    <!-- End Comunidad -->
     <!-- Registration End -->
 
     <!-- Team Start -->
@@ -625,8 +701,9 @@
           <div class="testimonial-item px-3">
             <div class="bg-light shadow-sm rounded mb-4 p-4">
               <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-              Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-              eirmod clita lorem. Dolor tempor ipsum clita
+              La página web educativa para TDAH ha sido un recurso invaluable en mi educación. 
+              Sus herramientas interactivas y enfoque adaptativo realmente han hecho la diferencia
+              en mi capacidad para concentrarme y comprender los conceptos.
             </div>
             <div class="d-flex align-items-center">
               <img
@@ -636,16 +713,17 @@
                 alt="Image"
               />
               <div class="pl-3">
-                <h5>Gabriel</h5>
-                <i>Full Stack</i>
+                <h5>Positiva y Beneficiosa</h5>
+                <i>Alejandro</i>
               </div>
             </div>
           </div>
           <div class="testimonial-item px-3">
             <div class="bg-light shadow-sm rounded mb-4 p-4">
               <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-              Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-              eirmod clita lorem. Dolor tempor ipsum clita
+              Lo que más me gustó de la página web es su enfoque personalizado.
+               Pude ajustar el ritmo de aprendizaje según mis necesidades, 
+               lo que fue crucial para mantener mi atención y retener la información
             </div>
             <div class="d-flex align-items-center">
               <img
@@ -655,16 +733,17 @@
                 alt="Image"
               />
               <div class="pl-3">
-                <h5>Noelia</h5>
-                <i>Fronted</i>
+                <h5>Apreciación de la Adaptabilidad</h5>
+                <i>Sofía</i>
               </div>
             </div>
           </div>
           <div class="testimonial-item px-3">
             <div class="bg-light shadow-sm rounded mb-4 p-4">
               <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-              Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-              eirmod clita lorem. Dolor tempor ipsum clita
+              "La interfaz de la página web es muy amigable. 
+               Esto facilita la navegación y la comprensión de los materiales, 
+               lo cual es fundamental para aquellos de nosotros con TDAH."
             </div>
             <div class="d-flex align-items-center">
               <img
@@ -674,16 +753,17 @@
                 alt="Image"
               />
               <div class="pl-3">
-                <h5>Parent Name</h5>
-                <i>Profession</i>
+                <h5>Facilidad de Uso</h5>
+                <i>Roberto</i>
               </div>
             </div>
           </div>
           <div class="testimonial-item px-3">
             <div class="bg-light shadow-sm rounded mb-4 p-4">
               <h3 class="fas fa-quote-left text-primary mr-3"></h3>
-              Sed ea amet kasd elitr stet, stet rebum et ipsum est duo elitr
-              eirmod clita lorem. Dolor tempor ipsum clita
+              La retroalimentación inmediata y constructiva proporcionada por la página web fue muy útil.
+               Me ayudó a entender dónde estaba cometiendo errores y a corregirlos de inmediato, 
+               lo cual es vital para mantener el interés y la motivación.
             </div>
             <div class="d-flex align-items-center">
               <img
@@ -693,8 +773,8 @@
                 alt="Image"
               />
               <div class="pl-3">
-                <h5>Parent Name</h5>
-                <i>Profession</i>
+                <h5>Feedback Constructivo</h5>
+                <i>Luis Alejandro</i>
               </div>
             </div>
           </div>
@@ -877,7 +957,8 @@
       Tu navegador no soporta el elemento de audio.
   </audio>
     <script src="script.js"></script>
+    <script src="main.js"></script>
     </div>   
-    <!-- Start Music -->
+    <!-- End Music -->
   </body>
 </html>
