@@ -9864,3 +9864,17 @@ a.text-dark:hover, a.text-dark:focus {
   padding: 0;
   list-style-type: none;
 }
+
+.modal-content .form-registro {
+  min-width: 16rem; 
+  background-color: #00394f; 
+  color:white;    
+}
+
+.form-row .box-imp{
+  width: 80%;
+}
+
+.vuelve{ 
+  border: solid 2px #00141c
+}

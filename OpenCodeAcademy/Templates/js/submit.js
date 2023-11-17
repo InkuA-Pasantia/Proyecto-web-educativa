@@ -5,7 +5,7 @@
     const forms = document.querySelectorAll('.needs-validation')
     const pass1 = document.querySelector('#validationCustomPass1')
     const pass2 = document.querySelector('#validationCustomPass2')
-    console.log(pass1.value+'hola'); 
+    //console.log(pass1.value+'hola'); 
   
     // Loop over them and prevent submission
     Array.from(forms).forEach(form => {
