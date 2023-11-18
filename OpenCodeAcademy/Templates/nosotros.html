@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Nosotros</title>
+    <title>OCA - Nosotros</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
     <meta content="Free HTML Templates" name="description" />
@@ -36,6 +36,7 @@
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
+    <link href="css/Navbar.css" rel="stylesheet" />
   </head>
 
   <body>
@@ -64,10 +65,11 @@
             <a href="nosotros.html" class="nav-item nav-link">Nosotros</a>
             <a href="cursos.html" class="nav-item nav-link">Cursos</a>
             <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mis cursos</a>
+              <a href="misCursos.html" class="nav-link dropdown-toggle" data-toggle="dropdown">Mis cursos</a>
               <div class="dropdown-menu rounded-0 m-0">
-                <a href="C_css.html" class="dropdown-item">HTML5</a>
-                <a href="C_css.html" class="dropdown-item">CSS</a>
+                <a href="misCursos.html" class="dropdown-item">- TODOS -</a>
+                <a href="C_html.html" class="dropdown-item">Html5</a>
+                <a href="C_css.html" class="dropdown-item">Css</a>
               </div>
             </div>
             <a href="contacto.html" class="nav-item nav-link">Contacto</a>
@@ -86,7 +88,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form class="px-4 py-3 needs-validation">
+                    <form action="logger.js" class="px-4 py-3 needs-validation">
                       <div class="form-group">
                         <div class="box-imp">
                           <label for="validationCustomUsername">Usuario</label>
@@ -128,7 +130,7 @@
                     </button>
                   </div>
                   <div class="modal-body">
-                    <form class="px-4 py-3 needs-validation">
+                    <form action="recuperar.js" class="px-4 py-3 needs-validation">
                       <div class="form-group">
                         <div class="box-imp">
                           <label for="validationEmail">Ingrese su E-mail, por favor!</label>
@@ -156,7 +158,7 @@
                     </button>
                   </div>
                   <div class="modal-body form-registro">
-                    <form class="px-4 py-3 needs-validation " novalidate>
+                    <form action="registrar.js" ="px-4 py-3 needs-validation " novalidate>
                       <div class="form-row">
                         <div class="box-imp">
                           <label for="validationCustom01">Nombre</label>
@@ -243,6 +245,7 @@
       </nav>
     </div>
     <!-- Navbar End -->
+
     <!-- Header Start -->
     <div class="container bg-primary mt-5 mb-5 ">
       <h3 class="display-3 font-weight-bold text-white">Nosotros</h3>
@@ -663,21 +666,20 @@
         <div class="col-lg-3 col-md-6 mb-5">
           <h3 class="text-primary mb-4">Enlaces rápidos</h3>
           <div class="d-flex flex-column justify-content-start">
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="index.html"
               ><i class="fa fa-angle-right mr-2"></i>Inicio</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="nosotros.html"
               ><i class="fa fa-angle-right mr-2"></i>Nosotros</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="cursos.html"
               ><i class="fa fa-angle-right mr-2"></i>Cursos</a
             >
-            <a class="text-white mb-2" href="#"
+            <a class="text-white mb-2" href="misCursos.html"
               ><i class="fa fa-angle-right mr-2"></i>Mis Cursos</a
             >
-            <a class="text-white mb-2" href="#"
-              ><i class="fa fa-angle-right mr-2"></i>Contacto</a
-            
+            <a class="text-white mb-2" href="contacto.html"
+              ><i class="fa fa-angle-right mr-2"></i>Contacto</a            
             >
           </div>
         </div>
