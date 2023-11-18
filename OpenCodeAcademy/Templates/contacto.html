@@ -154,7 +154,7 @@
                     </button>
                   </div>
                   <div class="modal-body form-registro">
-                    <form class="px-4 py-3 needs-validation " novalidate>
+                    <form class="px-4 py-3 needs-validation " id="miFormulario" method="POST" novalidate>
                       <div class="form-row">
                         <div class="box-imp">
                           <label for="validationCustom01">Nombre</label>
@@ -182,7 +182,7 @@
                             <div class="input-group-prepend">
                               <span class="input-group-text" id="inputGroupPrepend">@</span>
                             </div>
-                            <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
+                            <input type="text" class="form-control" id="username" aria-describedby="inputGroupPrepend" placeholder="tu usuario" required>
                             <div class="valid-feedback">
                               Correcto!
                             </div>
@@ -193,7 +193,7 @@
                         </div>
                         <div class="box-imp">
                           <label for="validationEmail">E-mail</label>
-                          <input type="email" class="form-control" id="validationEmail" placeholder="tu@email.com" required>
+                          <input type="email" class="form-control" id="email" placeholder="tu@email.com" required>
                           <div class="valid-feedback">
                             Correcto!
                           </div>
@@ -213,7 +213,7 @@
                         </div>
                         <div class="box-imp">
                           <label for="validationCustomPass2">Repetir Contraseña</label>
-                          <input type="password" class="form-control" id="validationCustomPass2" placeholder="Contraseña">
+                          <input type="password" class="form-control" id="pass" placeholder="Contraseña">
                           <div class="valid-feedback">
                             Correcto!
                           </div>
@@ -230,7 +230,7 @@
                           </label>
                         </div>
                       </div>
-                      <button type="submit" class="btn btn-primary">Registrarme ></button>
+                      <button onclick="enviarFormulario(); document.getElementById('miFormulario').submit()" class="btn btn-primary">Registrarme ></button>
                     </form>
                     <div class="dropdown-divider"></div>
                     <button type="button" class="btn btn-secondary vuelve" data-dismiss="modal" data-toggle="modal" data-target="#login"> < Ya soy usuario</button>
@@ -539,6 +539,8 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="../../Backend/src/server/server.js"></script> <!--se vincula a script backend-->
+
   </body>
 </html>
 

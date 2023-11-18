@@ -13,6 +13,49 @@ app.use(express.urlencoded({ extended: false }));
 
 app.get("/", (req, res) => res.json({ message: "Bienvenidos a Proyecto Oca" }));
 
+//app.use(bodyParser.json());
+//app.use(bodyParser.urlencoded({ extended: true }));
+
+// Configurar encabezados CORS para permitir solicitudes desde cualquier origen
+// Configurar encabezados CORS para permitir solicitudes desde cualquier origen
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*'); // Permitir solicitudes desde cualquier origen
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'); // Permitir los métodos que necesites, incluyendo OPTIONS
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept'); // Permitir ciertos encabezados
+  next();
+});
+
+
+// Ruta para guardar datos en la base de datos
+app.post('/guardar-datos', (req, res) => {
+  const { nombre, apellido, usuario, email, pass } = req.body;
+
+
+  console.log('Datos traídos del front: ' + nombre + ', ' + apellido + ', ' + usuario + ', ' + email + ', '+  pass);
+  // Insertar datos en la base de datos
+  // pool.query('INSERT INTO usuarios (nombre, apellido, usuario, email, pass) VALUES ($1, $2, $3, $4, $5)', [nombre, apellido, usuario, email, pass], (error, results) => {
+  //   if (error) {
+  //     console.error('Error al insertar datos:', error);
+  //     res.status(500).json({ error: 'Hubo un error al guardar los datos.' });
+  //   } else {
+  //     res.json({ success: true });
+  //   }
+  // });
+
+  return res.json({succes:true});
+
+});
+
+
+
+//app.get()
+
+// Manejar la solicitud OPTIONS
+app.options('/guardar-datos', (req, res) => {
+  res.status(200).end(); // Respondemos exitosamente a la solicitud OPTIONS
+});
+
+
 app.use("/api", cursosRoutes);
 app.use("/api", authRoutes);
 
