@@ -11,7 +11,7 @@
   --icon-color: #ACACBE;
   --icon-hover-bg: #5b5e71;
   --placeholder-color: #dcdcdc;
-  --outgoing-chat-bg: #0f6674;
+  --outgoing-chat-bg: #343541;
   --incoming-chat-bg: #444654;
   --outgoing-chat-border: #343541;
   --incoming-chat-border: #444654;
@@ -28,10 +28,7 @@
 }
 body {
   background: var(--outgoing-chat-bg);
-  background-color: #0f6674;
 }
-
-
 
 /* Chats container styling */
 .chat-container {
