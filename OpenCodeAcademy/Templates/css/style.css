@@ -137,25 +137,6 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-
-
-.btn-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #fff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.btn-float:hover {
-  background-color: #fff;
-}
-
 #user-input {
   flex: 1;
   padding: 8px;
