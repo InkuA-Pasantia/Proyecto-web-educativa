@@ -15,8 +15,9 @@ const loadDataFromLocalstorage = () => {
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
     const defaultText = `<div class="default-text">
-                            <h1>OCA <br> Robotino</h1>
-                            <p>Comienza una conversación.<br> El historial del chat se guardara aquí.</p>
+                            <img src="img/boot_Shad_400 (1).png" alt="Chat Bot"></img>
+                            <h1>OCA<br> Robotino</h1>
+                            <p>Comienza una dsgadgadfgds conversación.<br> El historial del chat se guardara aquí.</p>
                         </div>`
 
     chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
