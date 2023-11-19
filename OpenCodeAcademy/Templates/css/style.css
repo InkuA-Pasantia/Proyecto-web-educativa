@@ -87,7 +87,8 @@ body {
   right: 20px;
   display: flex;
   flex-direction: column;
-  transition: all 400ms ease;  
+  transition: all 400ms ease;
+  z-index: 1000;  
 }
 
 .chat-icon {
