@@ -31,7 +31,7 @@ app.post('/guardar-datos', (req, res) => {
   const { nombre, apellido, usuario, email, pass } = req.body;
 
 
-  console.log('Datos traídos del front: ' + nombre + ', ' + apellido + ', ' + usuario + ', ' + email + ', '+  pass);
+  console.log('Datos traídos del front: {\n nombre: ' + nombre + '\n apellido: ' + apellido + '\n usuario: ' + usuario + '\n email: ' + email + '\n contraseña: '+  pass + '\n }');
   // Insertar datos en la base de datos
   // pool.query('INSERT INTO usuarios (nombre, apellido, usuario, email, pass) VALUES ($1, $2, $3, $4, $5)', [nombre, apellido, usuario, email, pass], (error, results) => {
   //   if (error) {
