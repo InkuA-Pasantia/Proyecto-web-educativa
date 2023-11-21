@@ -64,7 +64,7 @@ export const signup = async (req, res, next) => {
         cellphone,
         birthday,
         rol,
-        gravatar
+        gravatar,
       ]
     );
     const token = await createAccessToken({ id: result.rows[0].id }); //podemos guardar id, name, email siempre separando por coma
@@ -97,3 +97,32 @@ export const profile = async (req, res) => {
   ]);
   return res.json(result.rows[0]);
 }; //Gonzalo
+
+export const guardar_datos = (req, res) => {
+  const { nombre, apellido, usuario, email, pass } = req.body;
+
+  console.log(
+    "Datos traídos del front: {\n nombre: " +
+      nombre +
+      "\n apellido: " +
+      apellido +
+      "\n usuario: " +
+      usuario +
+      "\n email: " +
+      email +
+      "\n contraseña: " +
+      pass +
+      "\n }"
+  );
+  // Insertar datos en la base de datos
+  // pool.query('INSERT INTO usuarios (nombre, apellido, usuario, email, pass) VALUES ($1, $2, $3, $4, $5)', [nombre, apellido, usuario, email, pass], (error, results) => {
+  //   if (error) {
+  //     console.error('Error al insertar datos:', error);
+  //     res.status(500).json({ error: 'Hubo un error al guardar los datos.' });
+  //   } else {
+  //     res.json({ success: true });
+  //   }
+  // });
+
+  return res.json({ succes: true });
+};
