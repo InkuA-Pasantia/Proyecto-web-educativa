@@ -33,7 +33,7 @@ function enviarFormulario() {
   };
 
   // Enviar los datos al servidor usando fetch
-  fetch("http://localhost:8080/api/guardar-datos", {
+  fetch("http://localhost:8080/api/guardar_datos", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

@@ -29,8 +29,36 @@ app.use((req, res, next) => {
 });
 
 // Manejar la solicitud OPTIONS
-app.options("/guardar-datos", (req, res) => {
+app.options("/api/guardar_datos", (req, res) => {
   res.status(200).end(); // Respondemos exitosamente a la solicitud OPTIONS
+});
+
+// Ruta específica para manejar la solicitud POST en /api/guardar_datos
+app.post("/api/guardar_datos", (req, res) => {
+  const { nombre, apellido, usuario, email, pass } = req.body;
+
+  console.log(
+    "Datos traídos del front: {\n nombre: " +
+      nombre +
+      "\n apellido: " +
+      apellido +
+      "\n usuario: " +
+      usuario +
+      "\n email: " +
+      email +
+      "\n contraseña: " +
+      pass +
+      "\n }"
+  );
+  // Redirigimos al usuario a la página de inicio
+  //res.redirect("/"); //en este caso, vuelve al principio
+  res.redirect("http://127.0.0.1:5501/OpenCodeAcademy/Templates/index.html");
+
+  // Acá van las querys para guardar los datos en la base de datos
+
+
+  //se comenta esta linea porque ya se hace na redirección y se traen los datos
+  //res.status(200).json({ mensaje: 'Los datos fueron recibidos del formulario exitosamente' });
 });
 
 app.use("/api", cursosRoutes);
