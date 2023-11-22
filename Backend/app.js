@@ -38,20 +38,9 @@ app.post("/api/guardar_datos", (req, res) => {
   const { nombre, apellido, usuario, email, pass } = req.body;
 
   console.log(
-    "Datos traídos del front: {\n nombre: " +
-      nombre +
-      "\n apellido: " +
-      apellido +
-      "\n usuario: " +
-      usuario +
-      "\n email: " +
-      email +
-      "\n contraseña: " +
-      pass +
-      "\n }"
+    "Datos traídos del front: {\n nombre: " + nombre + "\n apellido: " + apellido + "\n usuario: " + usuario + "\n email: " + email + "\n contraseña: " + pass + "\n }"
   );
   // Redirigimos al usuario a la página de inicio
-  //res.redirect("/"); //en este caso, vuelve al principio
   res.redirect("http://127.0.0.1:5501/OpenCodeAcademy/Templates/index.html");
 
   // Acá van las querys para guardar los datos en la base de datos
