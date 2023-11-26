@@ -14,7 +14,7 @@ router.get('/cursos', isAuth, listarCursos);
 
 router.get('/cursos/:id', isAuth, listarCurso);
 
-router.post('/cursos', crearCurso);
+router.post('/cursos', isAuth, crearCurso);
 
 router.put('/cursos/:id', isAuth, actualizarCurso);
 

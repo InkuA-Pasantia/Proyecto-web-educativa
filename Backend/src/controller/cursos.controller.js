@@ -1,8 +1,8 @@
 import { pool } from '../../db.js';
 
 export const listarCursos = async (req, res) => {
-    const resultado = await pool.query('SELECT  * FROM cursos');
-    console.log(resultado);
+    const resultado = await pool.query('SELECT * FROM cursos WHERE usuario_id = $1', [req.usuarioId]);
+    //console.log(userId);
     return res.json(resultado.rows);
 };
 
@@ -22,7 +22,7 @@ export const crearCurso = async (req, res, next) => {
     console.log(nombreCurso);
 
     try {
-        const result = await pool.query('INSERT INTO cursos (nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *', [nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido]);
+        const result = await pool.query('INSERT INTO cursos (nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido, usuario_id) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *', [nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido, usuario_id]);
         res.json(result.rows[0]);
         console.log(result.rows[0]);
         //console.log(result);
@@ -30,7 +30,7 @@ export const crearCurso = async (req, res, next) => {
     } catch (error) {
         if (error.code === "23505") {
             return res.status(409).json({
-                message: 'ya existe un curso con ese nombre'
+                message: 'Ya existe un curso con ese nombre'
             });
         }
         console.log(error);
@@ -39,9 +39,9 @@ export const crearCurso = async (req, res, next) => {
 };
 
 export const actualizarCurso = async (req, res) => {
-    const { nombreCurso, descripcion } = req.body;
+    const { nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido } = req.body;
     const id = req.params.id;
-    const result = await pool.query('UPDATE cursos SET nombreCurso = $1, descripcion = $2 WHERE id = $3 RETURNING *', [nombreCurso, descripcion, id]);
+    const result = await pool.query('UPDATE cursos SET nombreCurso = $1, lenguaje = $2, duracion = $3, estrellas = $4, dificultad = $5, descripcion = $6, contenido = $7 WHERE id = $8 RETURNING *', [nombreCurso, lenguaje, duracion, estrellas, dificultad, descripcion, contenido, id]);
 
     if (result.rowCount === 0) {
         return res.status(404).json({
